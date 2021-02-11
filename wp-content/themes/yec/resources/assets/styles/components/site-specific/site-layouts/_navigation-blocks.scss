@@ -1,0 +1,161 @@
+/* navigationBlocks */
+.navigation-blocks {
+  display: inline-block;
+  height: auto;
+  margin-top: -20px;
+  padding: 0 0 10px 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  .columns {
+    &.is-fw {
+      max-width: 1500px !important;
+      width: 100% !important;
+    }
+  }
+
+  ul.shortcuts {
+    display: -webkit-flex;
+    position: relative;
+    z-index: 10;
+
+    @include mid-touch {
+      display: inline-block;
+      width: 100%;
+    }
+
+    li {
+      -webkit-flex: 1 0 0px;
+      background-color: #000;
+      background-position: center center;
+      background-size: cover;
+      cursor: pointer;
+      height: 300px;
+      overflow: hidden;
+      margin: 0 5px;
+      padding: 0;
+      position: relative;
+      @include transition;
+
+      @include widescreen {
+        display: inline-block;
+        width: 33%;
+      }
+
+      @include mid-touch {
+        margin-bottom: 5px;
+        width: 30% !important;
+      }
+
+      @include phonewide {
+        width: 46% !important;
+      }
+
+      @include oddphone {
+        margin: 0 0 2px 0;
+        width: 100% !important;
+      }
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+      }
+
+      .content {
+        cursor: pointer;
+        height: 100%;
+        padding: 0 25px;
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+
+        @include total-centered;
+
+        @include fullhd {
+          padding: 0 15px;
+        }
+
+        @include widescreen {
+          padding: 0 10px;
+        }
+
+        h3 {
+          color: #fff;
+          font-family: $primaryFont;
+          font-size: em(21);
+          font-weight: 700;
+          text-align: center;
+          text-transform: none;
+
+          @include transition;
+
+          @include fullhd {
+            font-size: em(20);
+          }
+
+          @include widescreen {
+            font-size: em(18);
+          }
+
+          &:before {
+            background: #fff;
+            clear: both;
+            display: block;
+            content: '';
+            height: 3px;
+            margin: 0 auto;
+            position: relative;
+            top: -10px;
+            width: 0;
+
+            @include transition;
+          }
+        }
+      }
+
+      a {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+
+        @include transition;
+
+        .content {
+          h3 {
+            color: #fff;
+          }
+        }
+
+        &:hover {
+          h3 {
+            color: #fff;
+
+            &:before {
+              width: 60px;
+            }
+          }
+
+          .shade {
+            background: rgba(0, 0, 0, 0.6);
+          }
+        }
+
+        .shade {
+          background: rgba(0, 0, 0, 0.4);
+        }
+      }
+
+      .shade {
+        background: rgba(0, 0, 0, 0.3);
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 5;
+
+        @include transition;
+      }
+    }
+  }
+}

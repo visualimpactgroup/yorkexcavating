@@ -1,0 +1,46 @@
+/* Project Styles */
+.meta {
+  color: #666;
+  font-size: 14px;
+  padding-bottom: 5px;
+
+  div {
+    display: inline-block;
+    float: left;
+    padding-right: 10px;
+
+    @include phonewide {
+      float: none;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    [class^="icon-"] {
+      margin-right: 3px;
+      position: relative;
+      top: 1px;
+    }
+  }
+}
+
+
+/* project-gallery */
+ul.gallery {
+  list-style-type: none !important;
+  display: inline-block;
+  width: 100%;
+
+  li {
+    width: calc(100% / 4) !important;
+
+    img {
+      border: 1px solid #f1f1f1;
+      padding: 2px;
+      @include transition;
+
+      &:hover {
+        border-color: $primary_hover;
+      }
+    }
+  }
+}

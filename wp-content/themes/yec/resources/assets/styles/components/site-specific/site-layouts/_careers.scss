@@ -1,0 +1,116 @@
+/** Careers */
+section.careers {
+  padding: 10px 0 50px 0;
+  text-align: center;
+
+  .jobblock {
+    display: inline-block;
+    padding-bottom: 30px;
+    text-align: center;
+    width: 100%;
+
+    .type-title {
+      @include main-h3;
+      @include main-h3-widescreen;
+      @include main-h3-midtouch;
+      @include main-h3-phonewide;
+
+      &:after {
+        background: #ccc;
+        height: 3px;
+        position: absolute;
+      }
+    }
+
+    .job {
+      @include main-p;
+      @include main-p-widescreen;
+      @include main-p-midtouch;
+      @include main-p-phonewide;
+      border: 2px solid #ccc;
+      display: inline-block;
+      font-weight: 600;
+      text-align: left;
+      padding: 0;
+      width: 32%;
+      @include transition;
+
+      div,
+      span {
+        @include transition;
+      }
+
+      div {
+        font-size: em(17);
+        line-height: 26px;
+      }
+
+      span {
+        font-size: em(14);
+        font-style: italic;
+      }
+
+      &:hover,
+      &:focus {
+        border-color: $primary_link;
+      }
+
+      a {
+        color: #ccc;
+        display: inline-block;
+        padding: 10px 15px 8px 10px;
+
+        div {
+          color: #666;
+        }
+
+        span {
+          color: #ccc;
+        }
+
+        &:hover,
+        &:focus {
+
+          div,
+          span {
+            color: $primary_link;
+          }
+        }
+      }
+    }
+
+    p.non {
+      font-style: italic;
+      opacity: 0.4;
+    }
+  }
+}
+
+.career-single {
+  text-align: left;
+
+  .job-desc-content {
+    padding: 20px 0 40px 0;
+  }
+
+  .form-classes {
+    .field {
+      text-align: left !important;
+    }
+  }
+}
+
+.job-type {
+  color: #333;
+  display: inline-block;
+  opacity: 0.5;
+  font-size: em(15);
+  padding: 0 0 20px 0;
+}
+
+.eoe-note {
+  p {
+    font-size: em(14) !important;
+    line-height: 24px !important;
+  }
+}

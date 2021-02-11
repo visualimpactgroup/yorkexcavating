@@ -1,0 +1,28 @@
+/** Accessibility Classes */
+.skip-link {
+  position: absolute;
+  top: 0%;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  font-family: $mainParaFont;
+  text-transform: uppercase;
+  color: #fff;
+  background: $primary_link;
+  margin-top: -100%;
+  font-size: .8em;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: #fff;
+    padding: 5px 10px;
+    width: auto;
+    height: auto;
+    margin-top: 0;
+    overflow: visible;
+  }
+}

@@ -1,0 +1,95 @@
+/** Welcome Block */
+section.welcome {
+  margin-top: 0;
+  padding: 15px 0 30px 0;
+  position: relative;
+  text-align: center;
+
+  &.arrow-top {
+    &::before {
+      border-style: solid;
+      border-width: 0 25px 25px 25px;
+      border-color: transparent transparent #fff transparent;
+      content: '';
+      display: inline-block;
+      height: 0;
+      margin-left: -25px;
+      position: absolute;
+      top: -25px;
+      width: 0;
+      z-index: 30;
+
+      @include widescreen {
+        border-width: 0 15px 15px 15px;
+        margin-left: -15px;
+        top: -15px;
+      }
+    }
+  }
+
+  &.nmb {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &.nmt {
+    margin-top: -70px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+
+    strong {
+      font-weight: 600;
+    }
+
+    h1 {
+      @include welcome-h1;
+      @include welcome-h1-widescreen;
+      @include welcome-h1-midtouch;
+      @include welcome-h1-phonewide;
+
+      font-size: 100%;
+
+      br {
+        @include phonewide {
+          display: none;
+        }
+      }
+    }
+
+    h2 {
+      @include welcome-h1;
+      @include welcome-h1-widescreen;
+      @include welcome-h1-midtouch;
+      @include welcome-h1-phonewide;
+
+      color: #333 !important;
+      font-size: 100%;
+
+      br {
+        @include phonewide {
+          display: none;
+        }
+      }
+    }
+  }
+
+  p {
+    br {
+      @include phonewide {
+        display: none;
+      }
+    }
+  }
+
+  &.center {
+    position: relative;
+    text-align: center;
+
+    .title {
+      position: relative;
+      text-align: center;
+    }
+  }
+}

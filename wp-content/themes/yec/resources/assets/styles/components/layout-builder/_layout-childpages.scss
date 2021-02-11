@@ -1,0 +1,234 @@
+/* Child Page Shortcode */
+section.child-pages {
+  /* Block layout - childPageBlocks */
+  ul.nav-blocks {
+    &.childpages {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+
+      /* service child pages */
+      &.service-children {
+        li {
+          display: flex;
+          position: relative;
+          width: 48%;
+
+          @include tablet {
+            width: 48%;
+          }
+
+          @include phonewide {
+            text-align: center;
+            position: relative;
+            width: 100%;
+          }
+
+          .page-asset {
+            bottom: 0;
+            left: -30px;
+            position: absolute;
+            top: 0;
+            @include total-centered;
+
+            @include maxx {
+              display: inline-block;
+              left: 0;
+              width: 100%;
+            }
+
+            div {
+              background: #373636;
+              border-radius: 50%;
+              display: inline-block;
+              height: 110px;
+              padding: 5px;
+              position: relative;
+              width: 110px;
+              z-index: 2;
+              @include total-centered;
+
+              @include maxx {
+                display: inline-block;
+                left: 0;
+              }
+
+              img {
+                margin: 0 auto;
+                max-width: 80%;
+              }
+            }
+          }
+
+          .content {
+            background: #f6f3f3;
+            float: right;
+            margin: 30px 10px 0 10px;
+            padding: 40px 40px 40px 90px;
+            position: relative;
+            z-index: 1;
+
+            @include maxx {
+              float: none;
+              padding: 80px 40px 40px 40px;
+              text-align: center;
+            }
+
+            h3 {
+              @include maxx {
+                &:after {
+                  margin: 20px auto 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      li {
+        background: transparent;
+        border: 1px solid transparent;
+        border-radius: 8px;
+        display: inline-block;
+        list-style: none;
+        margin: 0 0 15px 0;
+        padding: 25px 20px 20px 20px;
+        position: relative;
+        width: 32%;
+
+        @include tablet {
+          width: 48%;
+        }
+
+        @include phonewide {
+          text-align: center;
+          position: relative;
+          width: 100%;
+        }
+
+        &:nth-of-type(even) {
+          float: right;
+          margin-right: 0;
+
+          @include touch {
+            float: left;
+          }
+        }
+
+        &:nth-of-type(odd){
+          float: left;
+          margin-right: 15px;
+
+          @include touch {
+            float: left;
+            margin-right: 0;
+          }
+        }
+
+        .page-asset {
+          float: left;
+          display: inline-block;
+          // padding: 0 0 15px 0;
+          margin-bottom: 15px;
+          text-align: center;
+          width: 100%;
+
+          @include phonewide {
+            float: none;
+            margin: 0 auto;
+            text-align: center;
+          }
+
+          img {
+            display: block;
+            transform: scale(1);
+
+            @include phonewide {
+              display: inline-block;
+            }
+          }
+
+          a {
+            @include transition;
+
+            &:hover {
+              img {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+
+        .content {
+          clear: both;
+          display: inline-block;
+          float: left;
+          padding: 10px 0;
+          width: 100%;
+
+          h3 {
+            @include main-h3;
+            @include main-h3-widescreen;
+            @include main-h3-midtouch;
+            @include main-h3-phonewide;
+
+            margin-bottom: 0;
+
+            a {
+              color: $primary_hover;
+              font-size: 100%;
+
+              &:hover,
+              &:focus,
+              &:active {
+                color: $primary_link;
+              }
+            }
+
+            &:after {
+              @include phonewide {
+                margin: 10px auto;
+              }
+            }
+          }
+
+          p {
+            @include main-p;
+            @include main-p-widescreen;
+            @include main-p-midtouch;
+            @include main-p-phonewide;
+            font-size: 95%;
+            padding-bottom: 2px;
+
+            @include widescreen {
+              font-size: 90%;
+            }
+          }
+
+          @include button;
+
+          .button-block {
+            padding: 0;
+
+            a.more {
+              color: $primary_link !important;
+              font-size: 90%;
+
+              [class^="icon-"] {
+                font-size: 80%;
+                margin-left: 3px;
+              }
+
+              &:hover,
+              &:focus {
+                color: $primary_hover !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

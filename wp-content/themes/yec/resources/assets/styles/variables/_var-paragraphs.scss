@@ -1,0 +1,52 @@
+$browser-context: 16;
+/*Main Paragraph*/
+$mainParaColor: #333;
+$mainParaFont: $primaryFont;
+$mainParaFW: 500;
+$mainParaSize: 18;
+$mainParaLH: 34px;
+$mainParaMargin: 0;
+$mainParaPadding: 5px 0 15px 0;
+$mainParaColorLink: $primary_hover;
+$mainParaColorLinkHover: #000;
+/* main-p-widescreen */
+$mainParaSize2: 16;
+$mainParaLH2: 30px;
+$mainParaMargin2: 0;
+$mainParaPadding2: 0 0 18px 0;
+/* main-p-midtouch */
+$mainParaSize3: 18;
+$mainParaLH3: 28px;
+$mainParaMargin3: 0;
+$mainParaPadding3: 0 0 15px 0;
+/* main-p-phonewide */
+$mainParaSize4: 16;
+$mainParaLH4: 28px;
+$mainParaMargin4: 0;
+$mainParaPadding4: 0 0 12px 0;
+
+/*Small Paragraph*/
+$smParaColor: $primary;
+$smParaFont: $primaryFont;
+$smParaFW: $primaryFontWeight;
+$smParaSize: 14;
+$smParaLH: 32px;
+$smParaMargin: 0;
+$smParaPadding: 0 0 10px 0;
+$smParaColorLink: $primary_hover;
+$smParaColorLinkHover: #000;
+/* sm-p-widescreen */
+$smParaSize2: 14;
+$smParaLH2: 32px;
+$smParaMargin2: 0;
+$smParaPadding2: 0 0 18px 0;
+/* sm-p-midtouch */
+$smParaSize3: 13;
+$smParaLH3: 30px;
+$smParaMargin3: 0;
+$smParaPadding3: 0 0 15px 0;
+/* sm-p-phonewide */
+$smParaSize4: 13;
+$smParaLH4: 30px;
+$smParaMargin4: 0;
+$smParaPadding4: 0 0 12px 0;

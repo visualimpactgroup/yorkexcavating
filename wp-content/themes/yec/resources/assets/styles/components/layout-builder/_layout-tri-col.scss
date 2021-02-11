@@ -1,0 +1,57 @@
+/* Tri-Column Blocks */
+.tri-col-blocks {
+  background: $triColBG;
+  padding: 20px 0;
+
+  h3 {
+    color: #333 !important;
+    font-size: em(22);
+    font-weight: 600;
+
+    @include widescreen {
+      font-size: em(20);
+    }
+
+    @include touch {
+      font-size: em(18);
+    }
+
+    a {
+      color: #333 !important;
+      @include transition;
+
+      &:hover,
+      &:active { color: $primary_link !important; }
+    }
+  }
+
+  .media-asset {
+    margin-bottom: 15px;
+    @include phonewide {
+      width: 100%;
+    }
+
+    img {
+      @include phonewide {
+        width: 100%;
+      }
+    }
+  }
+
+  p {
+    padding-top: 10px;
+  }
+
+  .button-block {
+    padding-top: 0 !important;
+
+    a {
+      opacity: 0.7;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+  }
+}

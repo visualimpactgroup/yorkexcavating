@@ -1,0 +1,130 @@
+/* FAQs */
+section.faq-layout.layout-builder {
+  .faq-section-title {
+    @include main-h3;
+    @include main-h3-widescreen;
+    @include main-h3-midtouch;
+    @include main-h3-phonewide;
+  }
+
+  .faq-block {
+    border-bottom: 1px solid #efeff0;
+    margin-bottom: 20px;
+    padding: 0 15px 25px 15px;
+    position: relative;
+    width: 100%;
+    @include transition;
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      a.jump {
+        opacity: 1;
+        @include transition;
+      }
+    }
+
+    .toggle {
+      &:last-child {
+        //border-bottom: 1px solid $primary-divirder_color;
+      }
+
+      .toggle-title {
+        border-radius: 8px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.02);
+        display: block;
+        font-weight: 300;
+        margin-bottom: 20px;
+        padding: 5px 15px 10px 15px;
+        position: relative;
+        @include transition;
+
+        &:hover,
+        &:focus {
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+          @include transition;
+        }
+      }
+
+      /* formerly h3 */
+      .title {
+        @include main-h3;
+        @include main-h3-widescreen;
+        @include main-h3-midtouch;
+        @include main-h3-phonewide;
+        cursor: pointer;
+        line-height: 1;
+        margin: 0;
+        text-align: left;
+      }
+    }
+
+    .toggle-inner {
+      display: none;
+      margin: 0 0 6px;
+      padding: 10px 45px 10px 20px !important;
+      text-align: left;
+
+      div {
+        max-width: 100%;
+      }
+
+      @include main-p;
+      @include main-p-widescreen;
+      @include main-p-midtouch;
+      @include main-p-phonewide;
+    }
+
+    .toggle-title {
+      .title-name {
+        display: block;
+        padding: 25px 25px 10px 0;
+      }
+
+      a i {
+        font-size: 22px;
+        margin-right: 5px;
+      }
+
+      i {
+        color: $paragraph-color;
+        position: absolute;
+        background: url('../images/plus-minus.png') 0 0 no-repeat;
+        width: 25px;
+        height: 50px;
+        transition: all 0.3s ease;
+        margin: 10px 0;
+        right: 10px;
+      }
+
+      &.active i {
+        background: url('../images/plus-minus.png') 0 -50px no-repeat;
+      }
+    }
+
+    ul {
+      padding-top: 10px;
+
+      li {
+        a {
+          color: $primary_link;
+          font-weight: 400;
+          margin-left: 5px;
+
+          &.more-after {
+            [class^="icon-"],
+            [class*=" icon-"] {
+              margin-left: 5px;
+            }
+          }
+
+          &:hover {
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+}

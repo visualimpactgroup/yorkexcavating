@@ -1,0 +1,16 @@
+/* Overrides */
+body.page-template .form-classes .field [type=radio], body.page-template .form-classes .field [type=radio]:checked, body.page-template .form-classes .field [type=radio]:not(:checked){  left: 0 !important;
+  position: relative !important;
+}
+
+article.type-jobs .careers .jobblock {
+ text-align: left !important;
+}
+
+section.careers .jobblock .job {
+  margin: 0 auto 10px !important;
+  clear: both;
+  display: block !important;
+  float: none;
+  width: 80% !important;
+}

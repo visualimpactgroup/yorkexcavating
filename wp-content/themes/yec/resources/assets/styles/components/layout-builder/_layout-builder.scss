@@ -1,0 +1,263 @@
+/*Shared Layout Components */
+.layout-builder {
+  &.rightAligned {
+    text-align: right;
+  }
+
+  &.leftAligned {
+    text-align: left;
+  }
+
+  &.centerAligned,
+  &.centeralign {
+    text-align: center;
+
+    .button-block {
+      padding-bottom: 40px !important;
+    }
+
+    h2 {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &.centeralign {
+    padding-top: 40px;
+
+    @include widescreen {
+      padding-top: 0;
+    }
+  }
+
+  h1 {
+    @include main-h1;
+    @include main-h1-widescreen;
+    @include main-h1-midtouch;
+    @include main-h1-phonewide;
+  }
+
+  h2 {
+    @include main-h2;
+    @include main-h2-widescreen;
+    @include main-h2-midtouch;
+    @include main-h2-phonewide;
+
+    &:after {
+      background: #ccc;
+      clear: both;
+      display: block;
+      content: '';
+      height: 3px;
+      margin: 20px 0 10px 0;
+      width: 30px;
+    }
+  }
+
+  h3 {
+    @include main-h3;
+    @include main-h3-widescreen;
+    @include main-h3-midtouch;
+    @include main-h3-phonewide;
+
+    &:after {
+      background: #ccc;
+      clear: both;
+      display: block;
+      content: '';
+      height: 3px;
+      margin: 20px 0 10px 0;
+      width: 30px;
+    }
+  }
+
+  h4 {
+    @include main-h4;
+    @include main-h4-widescreen;
+    @include main-h4-midtouch;
+    @include main-h4-phonewide;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  h5 {
+    font-weight: bold;
+    position: relative;
+    top: 10px;
+  }
+
+  ul {
+    li {
+      a {
+        &:hover,
+        &:focus {
+          color: $primary_brand-hover !important;
+        }
+      }
+    }
+  }
+
+  p {
+    @include main-p;
+    @include main-p-widescreen;
+    @include main-p-midtouch;
+    @include main-p-phonewide;
+  }
+
+  /* special classes */
+  .sec-title {
+    h2 {
+      @include main-h1;
+      @include main-h1-widescreen;
+      @include main-h1-midtouch;
+      @include main-h1-phonewide;
+
+      font-weight: 100;
+      font-style: italic;
+      margin-bottom: 0 !important;
+      text-transform: uppercase;
+    }
+  }
+
+  .lg-font {
+    color: $primary;
+    font-family: $primaryFont;
+    font-size: em(34);
+    font-weight: 600;
+    line-height: 46px;
+
+    @include widescreen {
+      font-size: em(28);
+      line-height: 40px;
+    }
+
+    @include desktop {
+      font-size: em(28);
+      line-height: 40px;
+    }
+  }
+
+  @include button;
+
+  .button-block {
+    padding-top: 10px;
+  }
+
+  .collage {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    @include touch {
+      top: 20px;
+    }
+
+    @include phonewide {
+      margin: 0 auto;
+      width: auto;
+    }
+  }
+
+  .media-asset {
+    position: relative;
+
+    @include phonewide {
+      display: inline-block;
+    }
+
+    img,
+    video {
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+
+    &.borderless {
+      border: 0;
+      display: inline-block;
+    }
+
+    &.bordered {
+
+      img,
+      video {
+        border-radius: 30px;
+        overflow: hidden;
+      }
+
+      &:after {
+        border: $borderedImg;
+        border-radius: 30px;
+        content: '';
+        height: 100%;
+        left: 4%;
+        position: absolute;
+        top: 4%;
+        width: 100%;
+        z-index: 1;
+      }
+    }
+
+    .caption {
+      color: #999;
+      font-size: em(12);
+      font-style: italic;
+      padding: 8px 0;
+      text-align: center;
+    }
+  }
+
+  &.reverse-sides {
+    .media-asset {
+      &.bordered {
+        &:after {
+          left: auto;
+          right: 4%;
+        }
+      }
+    }
+
+    .collage {
+      margin-left: 50px;
+
+      @include widescreen {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &.right-media {
+    .media-asset {
+      &.borderless,
+      &.bordered {
+        float: right;
+      }
+    }
+  }
+}
+
+.csection {
+  ul {
+    list-style-type: none !important;
+    padding: 20px 0 0 0 !important;
+
+    @include widescreen {
+      margin: 0 !important;
+    }
+
+    li {
+      margin-left: 0 !important;
+
+      [class^="icon-"] {
+        margin-right: 8px;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+}
+
+.relative-icon-container {
+  position: relative;
+}

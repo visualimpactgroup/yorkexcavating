@@ -1,0 +1,160 @@
+/** Social Media Links */
+.social-media {
+  display: inline-block;
+  float: left;
+  margin-top: 5px;
+  padding: 0;
+
+  ul {
+    display: inline-block;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      justify-content: center;
+      margin: 0 15px 0 0;
+
+      a {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        background: $social-shape-background;
+        border: $social-shape-border;
+        border-radius: $social-shape;
+        float: $social-shape-float;
+        height: $social-shape-height;
+        text-align: center;
+        width: $social-shape-width;
+        @include transition;
+
+        @include widescreen {
+          height: $social-shape-height-size2;
+          width: $social-shape-width-size2;
+        }
+
+        @include mid-touch {
+          height: $social-shape-height-size3;
+          width: $social-shape-width-size3;
+        }
+
+        @include phonewide {
+          height: $social-shape-height-size4;
+          width: $social-shape-width-size4;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: $social-shape-background_hover;
+          border-color: $social-shape-border_hover;
+          cursor: pointer;
+          color: $social-icon-color_hover !important;
+
+          [class^="icon-"] {
+            color: $social-icon-color_hover !important;
+          }
+        }
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+          color: $social-icon-color;
+          font-size: $social-icon-size;
+
+          @include widescreen {
+            font-size: $social-icon-size-size2;
+          }
+
+          @include mid-touch {
+            font-size: $social-icon-size-size3;
+          }
+
+          @include phonewide {
+            font-size: $social-icon-size-size4;
+          }
+        }
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.social-sharing {
+  display: inline-block;
+
+  &.fr {
+    float: right;
+  }
+
+  @include oddphone {
+    clear: left;
+    display: block;
+    float: left !important;
+  }
+
+  span.title {
+    color: $blog-post-info-color;
+    display: inline-block;
+    float: left;
+    font-family: $entryMetaFont;
+    font-size: 100%;
+    font-weight: 400;
+    line-height: $blog-post-info-lineheight;
+    padding-right: 10px;
+    position: relative;
+    //text-align: $blog-post-info-align;
+    top: 5px;
+  }
+
+  ul.share {
+    display: inline-block;
+    float: left;
+    margin-left: 2px;
+    position: relative;
+    top: -3px;
+
+    li {
+      border: 2px solid #fff;
+      cursor: pointer;
+      display: inline-block;
+      float: left;
+      height: 27px;
+      margin-right: 5px;
+      position: relative;
+      width: 27px;
+      @include total-centered;
+      @include transition;
+
+      &:hover {
+        background: #fff;
+        border-color: #fff;
+
+        .button {
+          [class^="icon-"] {
+            color: $primary;
+          }
+        }
+      }
+
+      .button {
+        background: transparent;
+        border-radius: 0;
+        bottom: 0;
+        border: 0;
+        height: 23px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include total-centered;
+
+        [class^="icon-"] {
+          color: #fff;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

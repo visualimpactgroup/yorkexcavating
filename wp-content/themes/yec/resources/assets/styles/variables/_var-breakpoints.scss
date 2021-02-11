@@ -1,0 +1,18 @@
+/** Breakpoints */
+$gap:                             32px;
+$maxxwindow:                      1800px;
+$maxx:                            1600px;
+$minimaxx:                        1440px;
+$fullhd:                          1344px + (2 * $gap); //1408
+$extrastopper:                    1350px;
+$widescreen:						          1152px + (2 * $gap); //1216
+$desktop:				                  960px + (2 * $gap); //1024
+$touch:                           1023px;
+$mid-touch:                       920px;
+$tablet:                          768px;
+$phonewide:                       767px;
+$phoneWide:                       767px;
+$phonewde:                        767px;
+$oddphone:                        690px;
+$phonevert:                       460px;
+$phoneVert:                       420px;

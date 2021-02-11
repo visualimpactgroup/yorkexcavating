@@ -1,0 +1,109 @@
+/* Steps */
+.step-content {
+  padding: 0 0 150px 0;
+  position: relative;
+
+  @include widescreen {
+    padding: 0 0 100px 0;
+  }
+
+  @include phonewide {
+    padding: 0 0 20px 0;
+  }
+
+  .step {
+    padding-bottom: 30px;
+
+    .step-icon {
+      background: $primary_link;
+      border-radius: 60px;
+      display: inline-block;
+      margin-left: -10px;
+      position: relative;
+      text-align: center;
+      height: 120px;
+      width: 120px;
+      z-index: 5;
+
+      @include widescreen {
+        margin-left: 10px;
+      }
+
+      @include phonewide {
+        margin: 0 auto;
+      }
+
+      @include total-centered;
+
+      [class^="icon-"] {
+        color: #fff;
+        font-size: 80px;
+      }
+    }
+
+    &.step-cont {
+      padding-left: 40px;
+
+      @include widescreen {
+        padding-left: 0;
+      }
+
+      @include phonewide {
+        background: #fff;
+        padding-left: 0;
+        text-align: center;
+      }
+
+      .step-title {
+        @include main-h2;
+        @include main-h2-widescreen;
+        @include main-h2-midtouch;
+        @include main-h2-phonewide;
+        color: $primary_link;
+      }
+
+      .button-block {
+        padding: 5px 0 15px 0;
+      }
+
+      .contact-info {
+        .contact {
+          color: $primary_link;
+          display: inline-block;
+          font-family: $primaryTitleFont;
+          font-size: em(17);
+          margin-right: 80px;
+          padding: 5px 0;
+
+          @include phonewide {
+            margin: 0 auto;
+            width: 100%;
+          }
+
+          a {
+            color: $primary_link;
+            @include transition;
+
+            &:hover,
+            &:active,
+            &:focus {
+              color: $primary_hover;
+            }
+          }
+
+          &.add {
+            margin-right: 0;
+            width: 100%;
+          }
+
+          [class^="icon-"] {
+            font-size: 13px;
+            margin-right: 5px;
+            position: relative;
+            top: 1px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,492 @@
+/* Toptier Nav Mixin */
+@mixin toptier-nav {
+  color: $toptier-nav-color;
+  font-family: $toptier-nav-fontfamily;
+
+  li {
+    @include transition;
+
+    @if $toptier-nav-color {
+      color: $toptier-nav-color;
+    }
+    @if $toptier-nav-size {
+      font-size: em($toptier-nav-size);
+    }
+    @if $toptier-nav-weight {
+      font-weight: $toptier-nav-weight;
+    }
+    @if $toptier-nav-lineheight {
+      line-height: $toptier-nav-lineheight;
+    }
+    @if $toptier-nav-fontweight {
+      font-weight: $toptier-nav-fontweight;
+    }
+    @if $toptier-nav-align {
+      text-align: $toptier-nav-align;
+    }
+
+    @if $toptier-nav-margin {
+      margin: $toptier-nav-margin;
+    }
+    @if $toptier-nav-padding {
+      padding: $toptier-nav-padding;
+    }
+
+    a {
+      color: $toptier-nav-color;
+
+      @if $toptier-nav-transform {
+        text-transform: $toptier-nav-transform;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $toptier-nav-color_hover;
+        outline: none;
+      }
+    }
+  }
+}
+
+@mixin toptier-nav-fullhd {
+  @include fullhd {
+    @if $toptier-nav-size-size2 {
+      font-size: em($toptier-nav-size-size2);
+    }
+
+    li {
+      @if $toptier-nav-lineheight-size2 {
+        line-height: $toptier-nav-lineheight-size2;
+      }
+      @if $toptier-nav-margin-size2 {
+        margin: $toptier-nav-margin-size2;
+      }
+      @if $toptier-nav-padding-size2 {
+        margin: $toptier-nav-padding-size2;
+      }
+    }
+  }
+}
+
+@mixin toptier-nav-extrastopper {
+  @include extrastopper {
+    li {
+      @if $toptier-nav-size-size3 {
+        font-size: em($toptier-nav-size-size3);
+      }
+      @if $toptier-nav-lineheight-size3 {
+        line-height: $toptier-nav-lineheight-size3;
+      }
+      @if $toptier-nav-margin-size3 {
+        margin: $toptier-nav-margin-size3;
+      }
+      @if $toptier-nav-padding-size3 {
+        padding: $toptier-nav-padding-size3;
+      }
+    }
+  }
+}
+
+@mixin toptier-nav-widescreen {
+  @include widescreen {
+    li {
+      @if $toptier-nav-size-size4 {
+        font-size: em($toptier-nav-size-size4);
+      }
+      @if $toptier-nav-lineheight-size4 {
+        line-height: $toptier-nav-lineheight-size4;
+      }
+      @if $toptier-nav-margin-size4 {
+        margin: $toptier-nav-margin-size4;
+      }
+      @if $toptier-nav-padding-size4 {
+        margin: $toptier-nav-padding-size4;
+      }
+    }
+  }
+}
+
+/* Main Nav Mixin */
+@mixin mainnav {
+  font-family: $main-nav-fontfamily;
+  @if $main-nav-size {
+    font-size: em($main-nav-size);
+  }
+  @if $main-nav-color {
+    color: $main-nav-color;
+  }
+  @if $main-nav-weight {
+    font-weight: $main-nav-weight;
+  }
+  @if $main-nav-lineheight {
+    line-height: $main-nav-lineheight;
+  }
+  @if $main-nav-fontweight {
+    font-weight: $main-nav-fontweight;
+  }
+  @if $main-nav-align {
+    text-align: $main-nav-align;
+  }
+  @if $main-nav-margin {
+    margin: $main-nav-margin;
+  }
+  @if $main-nav-transform {
+    text-transform: $main-nav-transform;
+  }
+
+  a {
+    color: $main-nav-color;
+    @include transition;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $main-nav-color_hover;
+      outline: none;
+    }
+  }
+}
+
+@mixin main-nav-fullhd {
+  @include fullhd {
+    @if $main-nav-size-size2 {
+      font-size: em($main-nav-size-size2);
+    }
+
+    @if $main-nav-lineheight-size2 {
+      line-height: $main-nav-lineheight-size2;
+    }
+
+    @if $main-nav-margin-size2 {
+      margin: $main-nav-margin-size2;
+    }
+  }
+}
+
+@mixin main-nav-extrastopper {
+  @include extrastopper {
+    @if $main-nav-size-size3 {
+      font-size: em($main-nav-size-size3);
+    }
+
+    @if $main-nav-lineheight-size3 {
+      line-height: $main-nav-lineheight-size3;
+    }
+
+    @if $main-nav-margin-size3 {
+      margin: $main-nav-margin-size3;
+    }
+  }
+}
+
+@mixin main-nav-widescreen {
+  @include widescreen {
+    @if $main-nav-size-size4 {
+      font-size: em($main-nav-size-size4);
+    }
+
+    @if $main-nav-lineheight-size4 {
+      line-height: $main-nav-lineheight-size4;
+    }
+
+    @if $main-nav-margin-size4 {
+      margin: $main-nav-margin-size4;
+    }
+  }
+}
+
+
+
+@mixin footer-nav-title-1 {
+  font-family: $footer-nav-titlefamily;
+  font-style: $footer-nav-titlestyle;
+  letter-spacing: $footer-nav-titlespacing;
+  text-transform: $footer-nav-titletransform;
+
+  @if $footer-nav-titlecolor {
+    color: $footer-nav-titlecolor;
+  }
+
+  @if $footer-nav-titleweight {
+    font-weight: $footer-nav-titleweight;
+  }
+
+  @if $footer-nav-title-size {
+    font-size: em($footer-nav-title-size);
+  }
+
+  @if $footer-nav-titlelineheight {
+    line-height: $footer-nav-titlelineheight;
+  }
+
+  @if $footer-nav-titlemargin {
+    margin: $footer-nav-titlemargin;
+  }
+
+  @if $footer-nav-titlepadding {
+    padding: $footer-nav-titlepadding;
+  }
+}
+
+@mixin footer-nav-title-widescreen {
+  @include widescreen {
+    @if $footer-nav-titlesize-size2 {
+      font-size: em($footer-nav-titlesize-size2);
+    }
+
+    @if $footer-nav-titlelineheight-size2 {
+      line-height: $footer-nav-titlelineheight-size2;
+    }
+
+    @if $footer-nav-titlemargin2 {
+      margin: $footer-nav-titlemargin2;
+    }
+
+    @if $footer-nav-titlepadding2 {
+      padding: $footer-nav-titlepadding2;
+    }
+  }
+}
+
+@mixin footer-nav-title-midtouch {
+  @include mid-touch {
+    @if $footer-nav-titlesize-size3 {
+      font-size: em($footer-nav-titlesize-size3);
+    }
+
+    @if $footer-nav-titlelineheight-size3 {
+      line-height: $footer-nav-titlelineheight-size3;
+    }
+
+    @if $footer-nav-titlemargin3 {
+      margin: $footer-nav-titlemargin3;
+    }
+
+    @if $footer-nav-titlepadding3 {
+      padding: $footer-nav-titlepadding3;
+    }
+  }
+}
+
+@mixin footer-nav-title-phonewide {
+  @include phonewide {
+    @if $footer-nav-titlesize-size4 {
+      font-size: em($footer-nav-titlesize-size4);
+    }
+
+    @if $footer-nav-titlelineheight-size4 {
+      line-height: $footer-nav-titlelineheight-size4;
+    }
+
+    @if $footer-nav-titlemargin4 {
+      margin: $footer-nav-titlemargin4;
+    }
+
+    @if $footer-nav-titlepadding4 {
+      padding: $footer-nav-titlepadding4;
+    }
+  }
+}
+
+/* footer nav */
+@mixin footer-nav {
+  font-family: $footer-nav-fontfamily;
+  text-transform: $footer-nav-texttransform;
+
+  @if $footer-nav-color {
+    color: $footer-nav-color;
+  }
+
+  @include transition;
+
+  @if $footer-nav-color_hover {
+    &:hover,
+    &:active,
+    &:focus {
+      color: $footer-nav-color_hover;
+      outline: none;
+    }
+  }
+
+  @if $footer-nav-fontweight {
+    font-weight: $footer-nav-fontweight;
+  }
+
+  @if $footer-nav-size {
+    font-size: em($footer-nav-size);
+  }
+
+  @if $footer-nav-lineheight {
+    line-height: $footer-nav-lineheight;
+  }
+
+  @if $footer-nav-margin {
+    margin: $footer-nav-margin;
+  }
+
+  @if $footer-nav-padding {
+    padding: $footer-nav-padding;
+  }
+}
+
+@mixin footer-nav-widescreen {
+  @include widescreen {
+    @if $footer-nav-size-size2 {
+      font-size: em($footer-nav-size-size2);
+    }
+
+    @if $footer-nav-lineheight-size2 {
+      line-height: $footer-nav-lineheight-size2;
+    }
+
+    @if $footer-nav-margin2 {
+      margin: $footer-nav-margin2;
+    }
+
+    @if $footer-nav-padding2 {
+      padding: $footer-nav-padding2;
+    }
+  }
+}
+
+@mixin footer-nav-midtouch {
+  @include mid-touch {
+    @if $footer-nav-size-size3 {
+      font-size: em($footer-nav-size-size3);
+    }
+
+    @if $footer-nav-lineheight-size3 {
+      line-height: $footer-nav-lineheight-size3;
+    }
+
+    @if $footer-nav-margin3 {
+      margin: $footer-nav-margin3;
+    }
+
+    @if $footer-nav-padding3 {
+      padding: $footer-nav-padding3;
+    }
+  }
+}
+
+@mixin footer-nav-phonewide {
+  @include phonewide {
+    @if $footer-nav-size-size4 {
+      font-size: em($footer-nav-size-size4);
+    }
+
+    @if $footer-nav-lineheight-size4 {
+      line-height: $footer-nav-lineheight-size4;
+    }
+
+    @if $footer-nav-margin4 {
+      margin: $footer-nav-margin4;
+    }
+
+    @if $footer-nav-padding4 {
+      padding: $footer-nav-padding4;
+    }
+  }
+}
+
+
+@mixin copyright-nav {
+  font-family: $copyright-nav-fontfamily;
+  text-transform: $copyright-nav-texttransform;
+
+  @if $copyright-nav-color {
+    color: $copyright-nav-color;
+  }
+
+  @include transition;
+
+  @if $copyright-nav-color_hover {
+    &:hover,
+    &:active,
+    &:focus {
+      color: $copyright-nav-color_hover;
+      outline: none;
+    }
+  }
+
+  @if $copyright-nav-fontweight {
+    font-weight: $copyright-nav-fontweight;
+  }
+
+  @if $copyright-nav-size {
+    font-size: em($copyright-nav-size);
+  }
+
+  @if $copyright-nav-lineheight {
+    line-height: $copyright-nav-lineheight;
+  }
+
+  @if $copyright-nav-margin {
+    margin: $copyright-nav-margin;
+  }
+
+  @if $copyright-nav-padding {
+    padding: $copyright-nav-padding;
+  }
+}
+
+@mixin copyright-nav-widescreen {
+  @include widescreen {
+    @if $copyright-nav-size-size2 {
+      font-size: em($copyright-nav-size-size2);
+    }
+
+    @if $copyright-nav-lineheight-size2 {
+      line-height: $copyright-nav-lineheight-size2;
+    }
+
+    @if $copyright-nav-margin2 {
+      margin: $copyright-nav-margin2;
+    }
+
+    @if $copyright-nav-padding2 {
+      padding: $copyright-nav-padding2;
+    }
+  }
+}
+
+@mixin copyright-nav-midtouch {
+  @include mid-touch {
+    @if $copyright-nav-size-size3 {
+      font-size: em($copyright-nav-size-size3);
+    }
+
+    @if $copyright-nav-lineheight-size3 {
+      line-height: $copyright-nav-lineheight-size3;
+    }
+
+    @if $copyright-nav-margin3 {
+      margin: $copyright-nav-margin3;
+    }
+
+    @if $copyright-nav-padding3 {
+      padding: $copyright-nav-padding3;
+    }
+  }
+}
+
+@mixin copyright-nav-phonewide {
+  @include phonewide {
+    @if $copyright-nav-size-size4 {
+      font-size: em($copyright-nav-size-size4);
+    }
+
+    @if $copyright-nav-lineheight-size4 {
+      line-height: $copyright-nav-lineheight-size4;
+    }
+
+    @if $copyright-nav-margin4 {
+      margin: $copyright-nav-margin4;
+    }
+
+    @if $copyright-nav-padding4 {
+      padding: $copyright-nav-padding4;
+    }
+  }
+}

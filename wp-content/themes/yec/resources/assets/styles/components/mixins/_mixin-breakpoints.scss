@@ -1,0 +1,90 @@
+/** Breakpoint Mixins */
+@mixin maxxwindow {
+  @media only screen and (max-width: $maxxwindow) {
+    @content;
+  }
+}
+
+@mixin maxx {
+  @media only screen and (max-width: $maxx) {
+    @content;
+  }
+}
+
+@mixin minimaxx {
+  @media only screen and (max-width: $minimaxx) {
+    @content;
+  }
+}
+
+@mixin fullhd {
+  @media only screen and (max-width: $fullhd) {
+    @content;
+  }
+}
+
+@mixin extrastopper {
+  @media only screen and (max-width: $extrastopper) {
+    @content;
+  }
+}
+
+@mixin widescreen {
+  @media only screen and (max-width: $widescreen) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin touch {
+  @media only screen and (max-width: $touch) {
+    @content;
+  }
+}
+
+@mixin mid-touch {
+  @media only screen and (max-width: $mid-touch) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: $tabletwide) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin phonewide {
+  @media only screen and (max-width: $phonewide) {
+    @content;
+  }
+}
+
+@mixin phonewde {
+  @media only screen and (max-width: $phonewde) {
+    @content;
+  }
+}
+
+@mixin oddphone {
+  @media only screen and (max-width: $oddphone) {
+    @content;
+  }
+}
+
+@mixin phonevert {
+  @media only screen and (max-width: $phonevert) {
+    @content;
+  }
+}

@@ -1,0 +1,118 @@
+/** Page Specific Overrides */
+body.single-our-blog,
+body.single-jobs {
+  header {
+    position: relative;
+
+    .top-tier {
+      nav.top-tier-nav {
+        .menu-top-tier-nav-container {
+          #menu-top-tier-nav {
+            li {
+              a {
+                color: $primary_hover;
+
+                &:hover,
+                &:focus {
+                  color: $primary_link;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .header-container {
+      .header-bar {
+        .brand {
+          a {
+            img.primary-logo {
+              opacity: 0;
+
+              @include phonewide {
+                opacity: 1;
+              }
+            }
+
+            img.colored-logo {
+              opacity: 1;
+
+              @include phonewide {
+                opacity: 0;
+              }
+            }
+          }
+        }
+
+        .main-nav {
+          .menu-main-nav-container {
+            .main-nav {
+              li {
+                a {
+                  color: $primary_hover;
+
+                  &:hover,
+                  &:focus {
+                    color: $primary_link;
+                  }
+                }
+
+                &.activated {
+                  a:first-of-type {
+                    color: $primary_link !important;
+                  }
+
+                  ul.sub-menu {
+                    background: $primary_hover;
+
+                    &:before {
+                      @include triangle(top,$primary_hover,8px);
+                      top: -8px;
+                    }
+
+                    li {
+                      a {
+                        color: #fff !important;
+
+                        &:hover {
+                          opacity: 0.8 !important;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                &.main-cta {
+                  border-color: $primary_hover;
+
+                  &:hover,
+                  &:focus {
+                    background: $primary_link;
+                    border-color: $primary_link;
+
+                    a {
+                      color: #fff !important;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+body.page-template-template-frontpage {
+  .dual-col-blocks {
+    margin-bottom: 0;
+    padding: 60px 0 40px 0;
+
+    @include minimaxx {
+      padding: 30px 0 10px 0;
+    }
+  }
+}

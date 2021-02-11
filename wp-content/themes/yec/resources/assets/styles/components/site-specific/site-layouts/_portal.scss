@@ -1,0 +1,313 @@
+/* Portal Styles */
+.portal {
+  padding-top: 20px;
+
+  /* sidebar */
+  .column-sidebar {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 50px;
+    padding: 10px 20px 5px 10px;
+
+    @include touch {
+      margin-bottom: 30px;
+    }
+
+    .portal-title {
+      @include main-h3;
+      @include main-h3-widescreen;
+      @include main-h3-phonewide;
+      display: inline-block;
+      font-size: 100%;
+      padding: 5px 10px;
+      width: 100%;
+    }
+
+    .menu-portal-navigation-container {
+      ul#menu-portal-navigation {
+        margin-left: 15px;
+        margin-top: 0;
+
+        @include touch {
+          margin-left: 20px;
+          margin-top: 10px;
+        }
+
+        li {
+          &.current-menu-item {
+            opacity: 0.5;
+            @include transition;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* resources */
+  ul.resources {
+    margin: 15px 0 10px 0 !important;
+    width: 100%;
+
+    &.standard {
+      display: inline-block;
+      list-style-type: none;
+
+      li {
+        @include transition;
+        border-top: 2px solid #f1f1f1;
+        display: inline-block;
+        margin: 0;
+        padding: 25px 0;
+        width: 100%;
+
+        &:hover,
+        &:focus {
+          border-color: $primary_link;
+        }
+      }
+    }
+
+    li {
+      position: relative;
+
+      .rtitle {
+        @include main-h4;
+        font-weight: bold;
+        padding-bottom: 5px;
+      }
+
+      .date {
+        color: #666;
+        font-family: $primaryFont;
+        font-size: em(12);
+        font-style: italic;
+      }
+
+      p {
+        font-size: 90%;
+        max-width: 90%;
+      }
+
+      .block-link {
+        display: inline-block;
+        border: 1px solid $primary_link;
+        height: 50px;
+        padding: 5px 20px;
+        position: absolute;
+        text-align: center;
+        top: 20px;
+        right: 5px;
+        @include total-centered;
+        @include transition;
+
+        [class^="icon-"] {
+          color: $primary_link;
+        }
+
+        span {
+          color: $primary_link;
+          font-size: em(11);
+          position: absolute;
+          text-indent: 9999px;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        .block-link {
+          background: $primary_link;
+
+          [class^="icon-"] {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* Top tier login block */
+header {
+  .admin-login-block {
+    border: 1px solid #ccc;
+    color: $primary;
+    display: inline-block;
+    margin-right: 20px;
+    float: right;
+    font-size: 85%;
+    padding: 9px 10px 5px 10px;
+    position: relative;
+    top: -7px;
+    z-index: 10;
+
+    @include touch {
+      display: none;
+    }
+
+    a {
+      color: $primary_link;
+      text-decoration: none;
+      @include transition;
+
+      &:hover,
+      &:focus {
+        color: $primary_hover;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+#menu {
+  .admin-login-block {
+    border-top: 1px solid #666;
+    color: #ccc;
+    display: inline-block;
+    font-size: 90%;
+    margin-top: -10px;
+    padding-top: 10px;
+    text-align: center;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+
+    @include touch {
+      width: 100%;
+    }
+  }
+}
+
+/* Dashboard Nav */
+.dashboard-nav {
+  #menu-dashboard-navigation {
+    display: table;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0 20px 0 !important;
+    width: 100%;
+
+    li {
+      background: #f1f1f1;
+      border: 1px solid #f1f1f1;
+      color: $primary;
+      display: flex;
+      margin: 10px 20px 10px 0;
+      padding: 10px 20px;
+      width: 45%;
+      @include transition;
+
+      .description {
+        font-size: 90%;
+        opacity: 0.8;
+      }
+
+      @include touch {
+        margin: 10px 0;
+        width: 100%;
+      }
+
+      &:hover,
+      &:focus {
+        background: transparent;
+
+        .description {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+/* Column User Name Display */
+.admin-block {
+  color: $primary;
+  display: inline-block;
+  width: 100%;
+
+  @include main-h3;
+  @include main-h3-widescreen;
+  @include main-h3-midtouch;
+  @include main-h3-phonewide;
+}
+
+/* WPMEM Login Form */
+#wpmem_login_form,
+#wpmem_pwdreset_form,
+#wpmem_getusername_form,
+#wpmem_login {
+  display: inline-block;
+  padding-bottom: 50px !important;
+  max-width: 550px;
+  width: 100%;
+
+  fieldset {
+    legend {
+      display: none;
+      position: absolute;
+    }
+
+    label {
+      color: $form-label-color;
+      font-family: $form-label-font;
+      font-size: em($form-label-size);
+      padding: $form-label-padding;
+    }
+
+    .div_text {
+      input {
+        background: $form-input-bg;
+        border: $form-input-b;
+        box-shadow: $form-input-boxshadow;
+        color: $form-input-color;
+        font-weight: $form-input-fontweight;
+        padding: $form-input-padding;
+      }
+    }
+  }
+
+  .button_div {
+    text-align: left;
+
+    /* uses styled settings */
+    input[type=submit] {
+      background: $buttonStyled-bg-color;
+      border: $buttonStyled-border;
+      border-radius: $buttonStyled-borderRadius;
+      color: $buttonStyled-linkcolor;
+      font-size: em($buttonStyled-font-size);
+      font-weight: $button-fontwt;
+      margin-top: 20px;
+      padding: $buttonStyled-padding;
+      text-transform: $buttonStyled-texttransform;
+
+      @include widescreen {
+        font-size: em($buttonStyled-font-size2);
+      }
+
+      @include mid-touch {
+        font-size: em($buttonStyled-font-size2);
+      }
+
+      @include phonewide {
+        font-size: em($buttonStyled-font-size2);
+      }
+
+      &:hover,
+      &:focus {
+        background: $buttonStyled-bg-color_hover;
+        border: $buttonStyled-border_hover;
+        color: $buttonStyled-linkcolor_hover;
+      }
+    }
+  }
+
+  input {
+    @include transition;
+  }
+}

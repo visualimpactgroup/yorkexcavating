@@ -1,0 +1,32 @@
+/** List Mixins */
+@mixin listDefaults {
+  display: inline-block;
+  list-style-type: square;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -10px;
+
+  li {
+    @include main-p;
+    @include main-p-widescreen;
+    @include main-p-midtouch;
+    @include main-p-phonewide;
+
+    float: left;
+    margin: 0 0 0 15px;
+    padding: 0 0 5px 0;
+    width: 100%;
+  }
+
+  &.double {
+    li {
+      padding: 0 10px 5px 0;
+      width: 45%;
+
+      @include widescreen {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+/** Grid styles */
+.is-widescreen {
+  width: $is-widescreen !important;
+}
+
+.columns {
+  margin: auto;
+  max-width: $maxwidth-cols !important;
+  width: 100%;
+
+  &.fw {
+    max-width: $fw;
+    width: $fw;
+  }
+}
+
+section.fifty-percents {
+  display: flex;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  @include oddphone {
+    display: inline-block;
+    padding: 0 !important;
+  }
+
+  &.fw {
+    overflow: hidden;
+    padding: 0;
+  }
+
+  &:nth-of-type(odd) {
+    //background: rgba(241, 241, 241, 0.6);
+
+    .cont.is-12 {
+      &:before {
+        /* background: rgba(5, 51, 79, 0.2); */
+        height: 100vw;
+        top: 15px;
+        width: 100%;
+      }
+
+      .padded {
+        padding: 10px 50px 10px 20px;
+
+        @include desktop {
+          padding: 10px 0;
+        }
+      }
+
+      @include oddphone {
+        text-align: center;
+      }
+      // .section-title {
+      //   padding-top: 25px;
+      // }
+    }
+  }
+
+  .half-width {
+    // flex: 1;
+    vertical-align: top;
+    width: 49.9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include desktop {
+      justify-content: flex-start;
+    }
+
+    @include oddphone {
+      width: 100%;
+    }
+
+    &.subpageimg-block {
+      @include oddphone {
+        display: none;
+      }
+    }
+
+    .columns {
+      &.mx-half {
+        width: 50%;
+      }
+
+      &.mx-threequarter {
+        margin-top: 0;
+        overflow: visible;
+        padding-top: 0;
+        position: relative;
+        text-align: left;
+
+        img {
+          display: block;
+          position: relative;
+          z-index: 10;
+        }
+
+        &.fr {
+          margin-right: -20px;
+
+          @include desktop {
+            margin-right: 0;
+          }
+
+          @include oddphone {
+            width: 100% !important;
+          }
+        }
+
+        &.fl {
+          margin-left: -20px;
+
+          @include desktop {
+            margin-left: 0;
+          }
+        }
+      }
+
+      &.mx-half,
+      &.mx-threequarter {
+        &.fr {
+          float: right !important;
+        }
+
+        &.fl {
+          float: left !important;
+        }
+      }
+    }
+  }
+}

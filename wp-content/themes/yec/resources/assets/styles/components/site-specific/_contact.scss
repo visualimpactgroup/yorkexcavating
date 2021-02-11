@@ -1,0 +1,265 @@
+/** Contact Links */
+section.contact-links {
+  ul.clinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: -30px;
+    position: relative;
+    text-align: center;
+
+    li {
+      border-right: 1px solid #f1f1f1;
+      display: inline-block;
+      padding: 15px;
+      vertical-align: top;
+      width: 25%;
+
+      @include widescreen {
+        padding: 10px;
+      }
+
+      @include mid-touch {
+        padding: 10px 5px;
+      }
+
+      @include tablet {
+        width: 50%;
+      }
+
+      &:last-of-type(){
+        border-right: 0;
+      }
+
+      .positioned {
+        @include total-centered;
+
+        .icon {
+          height: 60px;
+          margin: 0 auto 5px;
+          text-align: center;
+          width: 60px;
+
+          @include widescreen {
+            height: 50px;
+            width: 50px;
+          }
+
+          @include mid-touch {
+            height: 40px;
+            width: 40px;
+          }
+
+          [class^="icon-"] {
+            color: $primary_brand-hover;
+            font-size: 50px;
+
+            @include widescreen {
+              font-size: 40px;
+            }
+
+            @include mid-touch {
+              font-size: 34px;
+            }
+          }
+        }
+
+        .title {
+          @include main-h3;
+
+          text-transform: uppercase;
+
+          @include widescreen {
+            font-size: em(18);
+          }
+        }
+
+        .cont {
+          color: #666;
+          font-family: $primaryFont;
+          font-size: em(18);
+          line-height: 24px;
+
+          @include widescreen {
+            font-size: em(16);
+            line-height: 22px;
+          }
+
+          a {
+            color: #666;
+
+            @include transition;
+
+            &:hover,
+            &:focus {
+              color: $primary_brand-hover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.contactblock {
+  .sidebar {
+    background: #f8f8f8;
+    display: inline-block;
+    padding: 10px 15px;
+
+    @include touch {
+      text-align: center;
+      width: 100%;
+    }
+
+    .csection {
+      margin-bottom: 10px;
+      padding: 5px 20px 10px 0;
+
+      .title {
+        @include main-h3;
+        @include main-h3-widescreen;
+        @include main-h3-midtouch;
+        @include main-h3-phonewide;
+
+        padding-bottom: 10px;
+
+        @include touch {
+          padding-bottom: 12px;
+        }
+      }
+
+      ul {
+        margin: 2px 0 0 20px;
+        list-style-type: none !important;
+
+        @include touch {
+          margin: 2px auto;
+        }
+
+        &.social-media {
+          display: inline-block;
+          margin-left: 0;
+          padding-top: 5px;
+          width: 100%;
+
+          @include touch {
+            margin: 0 auto;
+            text-align: center;
+          }
+
+          li {
+            display: inline-block;
+            margin: 0 8px 0 0;
+            position: relative;
+            text-align: center;
+            vertical-align: top;
+
+            @include touch {
+              float: none;
+              width: auto;
+            }
+
+            a {
+              @include transition;
+            }
+
+            .icon {
+              border: 1px solid $primary;
+              height: 30px;
+              text-align: center;
+              width: 30px;
+              @include total-centered;
+
+              [class^="icon-"] {
+                color: $primary;
+                font-size: 16px;
+                left: 0;
+                position: relative;
+                top: 0;
+              }
+
+              &:hover {
+                background-color: $primary;
+                @include transition;
+
+                [class^="icon-"] {
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+
+        li {
+          position: relative;
+          @include main-p;
+
+          @include widescreen {
+            font-size: em(14);
+          }
+
+          @include touch {
+            padding-bottom: 10px;
+
+            &:last-of-type {
+              padding-bottom: 0;
+            }
+          }
+
+          [class^="icon-"] {
+            left: -20px;
+            position: absolute;
+            top: 9px;
+
+            @include touch {
+              display: block;
+              left: 0;
+              position: relative;
+              top: 0;
+            }
+          }
+
+          &.address {
+            span {
+              display: inline-block;
+              vertical-align: top;
+            }
+          }
+
+          line-height: 28px;
+          padding: 5px 0;
+
+          span {
+            margin-left: 5px;
+
+            @include touch {
+              margin-left: 0;
+              padding-top: 10px;
+            }
+          }
+
+          &:last-of-type {
+            border-bottom: 0;
+            padding-bottom: 0;
+          }
+
+          a {
+            color: $primary;
+            @include transition;
+
+            &:hover {
+              color: $primary_hover;
+            }
+
+            .sub-title {
+              font-size: 13px;
+              color: #666;
+            }
+          }
+        }
+      }
+    }
+  }
+}

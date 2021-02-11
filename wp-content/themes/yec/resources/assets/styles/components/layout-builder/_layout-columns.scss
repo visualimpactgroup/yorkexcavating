@@ -1,0 +1,30 @@
+/* Column Based Layouts */
+.five-sixth,
+.dual-col {
+  padding: 40px 0;
+
+  @include widescreen {
+    padding: 30px 0;
+  }
+
+  @include touch {
+    padding: 15px 0;
+  }
+
+  @include mid-touch {
+    padding: 5px 0;
+  }
+}
+
+
+/* Column specifics */
+.five-sixth {
+  @include phonewide {
+    position: relative;
+    text-align: center;
+  }
+
+  h1 {
+    padding-top: 25px;
+  }
+}

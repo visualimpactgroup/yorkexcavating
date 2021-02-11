@@ -1,0 +1,212 @@
+/** Brand Selection */
+section.cat-selector {
+  background: $primary;
+  display: inline-block;
+  position: relative;
+  padding: 30px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+
+  @include touch {
+    padding: 30px 10px 10px 10px;
+  }
+
+  @include mid-touch {
+    padding: 20px 10px 40px 10px;
+  }
+
+  @media only screen and (max-width: 560px) {
+    padding: 10px 10px 30px 10px;
+  }
+
+  .title {
+    color: #fff;
+    font-family: $primaryTitleFont;
+    font-size: em(32);
+    margin: 15px 0 20px;
+    text-align: center;
+
+    @include maxxwindow {
+      font-size: em(22);
+    }
+
+    @include touch {
+      font-size: em(20);
+    }
+
+    @include mid-touch {
+      font-size: em(24);
+    }
+
+    @media only screen and (max-width: 560px) {
+      margin-bottom: 10px;
+    }
+
+    div {
+      height: 40px;
+      position: relative;
+      top: -3px;
+
+      @include maxxwindow {
+        height: 30px;
+        top: -6px;
+      }
+
+      @include desktop {
+        top: -5px;
+      }
+
+      &:before {
+        @include maxxwindow {
+          width: 150px;
+        }
+
+        @include desktop {
+          width: 120px;
+        }
+
+        @include mid-touch {
+          width: 140px;
+        }
+      }
+    }
+  }
+
+  p {
+    @include main-p;
+
+    color: #fff;
+    text-align: center;
+  }
+
+  ul.cat-list {
+    display: block;
+    margin: 20px auto 40px;
+    width: 70%;
+    @include animationDelay(10s);
+
+    @include maxxwindow {
+      margin: 30px auto 0;
+      width: 80%;
+    }
+
+    @include mid-touch {
+      position: relative;
+      text-align: center;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 560px) {
+      margin-top: 15px;
+    }
+
+    li {
+      border: 1px solid #fff;
+      margin: 5px 0 10px 0;
+      padding: 3px;
+
+      @include mid-touch {
+        display: inline-block;
+        margin: 5px;
+        width: 40%;
+      }
+
+      @include oddphone {
+        width: 45%;
+      }
+
+      @media only screen and (max-width: 560px) {
+        margin: 5px 5px 5px 0;
+        width: 100%;
+      }
+
+      a {
+        background: $primary !important;
+        color: #fff;
+        display: inline-block;
+        height: 50px;
+        position: relative;
+        width: 100%;
+
+        @include touch {
+          height: 40px;
+        }
+
+        &:active {
+          background: #fff !important;
+        }
+
+        &:before {
+          background: $primary;
+        }
+
+        &:hover {
+          background: #fff !important;
+
+          &:before {
+            background: $primary;
+          }
+
+          .brand-name {
+            color: $primary;
+          }
+        }
+
+        @include total-centered;
+
+        .plus-icon {
+          background: #fff;
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 60px;
+          @include total-centered;
+
+          @include touch {
+            width: 40px;
+          }
+
+          @include phonewide {
+            width: 30px;
+          }
+
+          .plus {
+            color: $primary;
+            font-size: em(16);
+            text-align: center;
+
+            @include touch {
+              font-size: em(13);
+            }
+
+            @include phonewide {
+              font-size: em(11);
+            }
+          }
+        }
+
+        .brand-name {
+          font-size: em(20);
+          font-weight: 600;
+          margin-left: 70px;
+          text-align: left;
+          position: relative;
+          top: 2px;
+
+          @include touch {
+            font-size: em(18);
+            margin-left: 50px;
+            top: 0;
+          }
+
+          @include phonewide {
+            font-size: em(16);
+            margin-left: 40px;
+          }
+        }
+      }
+    }
+  }
+}

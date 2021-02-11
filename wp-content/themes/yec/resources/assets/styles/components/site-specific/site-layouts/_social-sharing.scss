@@ -1,0 +1,89 @@
+/* Social Sharing Block */
+.social-sharing-block {
+  background: #fff;
+  border: 1px solid #f1f1f1;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 30px 0;
+  text-align: center;
+  padding: 50px;
+  width: 100%;
+
+  .title {
+    color: $primary_hover;
+    font-family: $primaryTitleFont;
+    font-size: em(22);
+    font-weight: $primaryTitleFontWeightBold;
+    line-height: 30px;
+    margin: $excerptTitleMargin;
+
+    @include widescreen {
+      font-size: em($excerptTitleSize2);
+      line-height: $excerptTitleLH2;
+    }
+
+    @include mid-touch {
+      font-size: em($excerptTitleSize3);
+      line-height: $excerptTitleLH3;
+    }
+
+    @include phonewide {
+      font-size: em($excerptTitleSize4);
+      line-height: $excerptTitleLH4;
+    }
+  }
+
+
+  ul.share {
+    display: inline-block;
+    float: none;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    top: 0 !important;
+    width: 100%;
+
+    li {
+      border: 2px solid $primary_hover;
+      border-radius: 20px;
+      cursor: pointer !important;
+      display: inline-block !important;
+      float: none !important;
+      height: 40px !important;
+      margin: 0 5px !important;
+      position: relative;
+      width: 40px !important;
+      @include total-centered;
+      @include transition;
+
+      &:hover {
+        background: $primary_link;
+        border-color: $primary_link;
+
+        .button {
+          [class^="icon-"] {
+            color: #fff;
+          }
+        }
+      }
+
+      .button {
+        background: transparent;
+        border-radius: 0;
+        bottom: 0;
+        border: 0;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include total-centered;
+
+        [class^="icon-"] {
+          color: $primary_hover;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

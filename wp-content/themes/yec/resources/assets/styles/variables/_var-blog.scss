@@ -1,0 +1,97 @@
+/** Blog */
+$blog-post-info-size:               14;
+$blog-post-info-color:              #fff;
+$blog-post-info-color_link:         $primary_link;
+$blog-post-info-color_hover:        $primary_hover;
+$blog-post-info-lineheight:         14px;
+$blog-post-info-weight:             300;
+$blog-post-info-align:              left;
+$blog-post-info-borderright:        1px solid #fff;
+$blog-post-info-borderleft:         0 solid transparent;
+$blog-post-info-borderright-last:   0 solid transparent;
+$blog-post-info-borderleft-last:    0 solid;
+$blog-signoff-border:               5px solid #ccc;
+
+/* Blog Feed Main Page - image */
+$excerptImgBorder:                  0;
+$excerptImgBorderHover:             #ccc;
+$excerptImgMargin:                  0 0 15px 0;
+$excerptImgPadding:                 0;
+/* Blog Feed Main Page - title */
+$excerptTitleFont:                  $primaryFont;
+$excerptTitleFW:                    500;
+$excerptTitleSize1:                 24;
+$excerptTitleLH1:                   32px;
+$excerptTitleSize2:                 24;
+$excerptTitleLH2:                   32px;
+$excerptTitleSize3:                 22;
+$excerptTitleLH3:                   30px;
+$excerptTitleSize4:                 20;
+$excerptTitleLH4:                   28px;
+$excerptTitleMargin:                0 0 8px 0;
+$excerptTitleLinkColor:             #333;
+$excerptTitleLinkColorHover:        $primary;
+/* Blog Feed Main Page - entry meta */
+$entryMetaContainerPadding:         5px 0;
+$entryMetaColor:                    #999;
+$entryMetaColorHover:               #333;
+$entryMetaBorder:                   1px solid $entryMetaColor;
+$entryMetaMargin:                   0 8px 0 0;
+$entryMetaPadding:                  10px 0 5px 0;
+$entryMetaFont:                     $primaryFont;
+$entryMetaFontSize:                 13;
+$entryMetaLH:                       16px;
+$entryMetaStyle:                    none;
+$entryMetaTransform:                none;
+/* Blog Feed Main Page - paragraph */
+$excerptParaFont:                  $primaryFont;
+$excerptParaFW:                    $primaryFontWeight;
+$excerptParaSize1:                 18;
+$excerptParaLH1:                   30px;
+$excerptParaMargin:                5px 0 8px 0;
+$excerptParaPadding:               5px 0 0 0;
+$excerptParaColor:                 $primary_para;
+$excerptParaLinkColor:             $primary_para;
+$excerptParaLinkColorHover:        $primary_para;
+/* Blog Feed Main Page - more link */
+$moreLink:                         $primary_hover;
+$moreLinkTD:                       none;
+$moreLinkHover:                    $primary_para;
+$moreLinkMargin:                   0;
+/* Blog Feed Internal Page */
+$internalBlogFeedTitle:            24;
+$internalBlogFeedTitleLH:          40px;
+$internalBlogFeedTitleFW:          200;
+$internalBlogFeedBG:               transparent;
+$internalBlogFeedPadding:          60px 0;
+$excerptTextColor:                 #63656a;
+$excerptTextSize:                  14;
+$excerptTextFW:                    500;
+$excerptTextLH:                    24px;
+/* Blog Single Classes - Sidebar */
+$sidebarBG:                        #f8f8f8;
+$sidebarBGAfter:                   #f8f8f8;
+$sidebarPadding1:                  10px;
+$sidebarPadding2:                  10px;
+$sidebarBlockTitle1:               18;
+$sidebarBlockTitle2:               18;
+$sidebarBlockTitleColor:           #838383;
+$sidebarBlockTitleFF:              $primaryFont;
+$sidebarBlockTitleFW:              $primaryTitleFontWeightBold;
+$sidebarLinkBorderSolid:           1px solid $primary_lightgrey;
+$sidebarLinkBorderDotted:          1px dotted $primary_lightgrey;
+$sidebarLinkFF:                    $primaryFont;
+$sidebarLinkFontSize:              17;
+$sidebarLinkColor:                 $primary;
+$sidebarLinkColorHover:            $primary_link;
+/* Blog Pagination Classes */
+$paginationMargin:                 0 0 10px 0;
+$paginationPadding:                8px 15px 5px 15px;
+$paginationControlHeight:          34px;
+$paginationControlFontSize:        14;
+$paginationControlColor:           #ccc;
+$paginationBorder:                 1px solid #ccc;
+$paginationControlColor_hover:     $primary;
+$paginationBorderColor_hover:      $primary;
+$paginationBorderRadius:           0;
+$paginationSmBlockPadding:         10px 15px 5px 15px;

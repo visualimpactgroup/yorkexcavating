@@ -1,0 +1,69 @@
+section.fifty-percents.layout-builder {
+  display: flex;
+  margin-bottom: -5px;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  @include mid-touch {
+    display: inline-block;
+    padding: 0;
+  }
+
+  @include phonewide {
+    margin-top: -25px;
+  }
+
+  .half-width {
+    display: inline-block;
+    vertical-align: top;
+    width: 49.9%;
+
+    @include touch {
+      width: 100%;
+    }
+
+    &:first-of-type {
+      border-right: 5px solid #fff;
+
+      @include mid-touch {
+        border-right: 0;
+      }
+    }
+
+    .columns {
+      &.mx-half {
+        border: 1px solid #fff;
+        width: 50%;
+
+        @include mid-touch {
+          border: 0;
+        }
+      }
+
+      &.mx-threequarter {
+        width: 65%;
+
+        @include maxxwindow {
+          width: 80%;
+        }
+
+        @include fullhd {
+          width: 100%;
+        }
+      }
+
+      &.mx-half,
+      &.mx-threequarter {
+        &.fr {
+          float: right !important;
+        }
+
+        &.fl {
+          float: left !important;
+        }
+      }
+    }
+  }
+}

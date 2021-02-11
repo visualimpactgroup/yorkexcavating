@@ -1,0 +1,304 @@
+@mixin button {
+  .button-block {
+    display: inline-block;
+    padding: 10px 0;
+
+    a.btn,
+    button.btn,
+    &.secondary-button .btn {
+
+      /* Icon Button Classes */
+      [class^="icon-"] {
+        font-size: em($buttonMore-icon-size);
+        margin-left: 3px;
+        position: relative;
+        top: 0;
+
+        @include widescreen {
+          font-size: em($buttonMore-icon-size2);
+        }
+
+        @include mid-touch {
+          font-size: em($buttonMore-icon-size3);
+        }
+
+        @include phonewide {
+          font-size: em($buttonMore-icon-size4);
+        }
+      }
+
+      &.ico-before {
+        [class^="icon-"] {
+          margin-left: -3px;
+          margin-right: 3px;
+        }
+      }
+
+      /* Generic Buttons */
+      display: inline-block;
+      font-family: $button-fontfam !important;
+      font-size: em($mainParaSize);
+      font-weight: $primaryFontWeight;
+      opacity: 1;
+      text-transform: none !important;
+
+      @include widescreen {
+        font-size: em($buttonStyled-font-size2);
+      }
+
+      @include mid-touch {
+        font-size: em($buttonStyled-font-size3);
+      }
+
+      @include phonewide {
+        font-size: em($buttonStyled-font-size4);
+      }
+
+      @include oddphone {
+        display: block;
+      }
+
+      &:nth-of-type(1){
+        color: $primary_brand-hover !important;
+        margin-right: 30px;
+
+        @include mid-touch {
+          margin-bottom: 10px;
+        }
+
+        @include transition;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: $primary !important;
+
+          [class^="icon-"] {
+            color: $primary !important;
+          }
+        }
+      }
+
+      &:nth-of-type(2){
+        color: $primary_brand-hover !important;
+        margin-right: 0;
+        opacity: 0.8;
+
+        @include transition;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: $primary !important;
+          opacity: 1;
+
+          [class^="icon-"] {
+            color: $primary !important;
+          }
+        }
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+
+        @include mid-touch {
+          margin-bottom: 0;
+        }
+      }
+
+      /* Styled Button */
+      &.styled {
+        border-radius: $buttonStyled-borderRadius;
+        display: inline-block;
+        font-weight: $primaryFontWeightMed;
+        margin-bottom: 10px;
+        padding: $buttonStyled-padding;
+
+        @include transition;
+
+        @include widescreen {
+          font-size: em($buttonStyled-font-size2);
+          padding: $buttonStyled-padding2;
+        }
+
+        @include mid-touch {
+          font-size: em($buttonStyled-font-size3);
+          margin-bottom: 15px;
+          padding: $buttonStyled-padding3;
+        }
+
+        @include phonewide {
+          font-size: em($buttonStyled-font-size4);
+          padding: $buttonStyled-padding4;
+        }
+
+        @include oddphone {
+          display: block;
+          margin: 0 auto 10px;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+
+        &.lg {
+          padding: $buttonStyledLG-padding;
+
+          @include widescreen {
+            font-size: em($buttonStyled-font-size2);
+            padding: $buttonStyledLG-padding2;
+          }
+
+          @include mid-touch {
+            font-size: em($buttonStyled-font-size3);
+            padding: $buttonStyledLG-padding3;
+          }
+
+          @include phonewide {
+            font-size: em($buttonStyled-font-size4);
+            padding: $buttonStyledLG-padding4;
+          }
+        }
+
+        &:nth-of-type(1){
+          background: $buttonStyled-bg-color;
+          border: $buttonStyled-border;
+          color: $buttonStyled-linkcolor !important;
+          opacity: 1;
+
+          &:hover {
+            background: $buttonStyled-bg-color_hover;
+            border: $buttonStyled-border_hover;
+            color: $buttonStyled-linkcolor_hover !important;
+          }
+        }
+
+        background: $buttonStyled-bg-color_hover;
+        border: $buttonStyled-border_hover;
+        color: $buttonStyled-linkcolor_hover !important;
+        opacity: 1;
+
+        &:hover {
+          background: $buttonStyled-bg-color;
+          border: $buttonStyled-border;
+          color: $buttonStyled-linkcolor !important;
+          opacity: 1;
+        }
+
+
+        &:last-of-type {
+          margin-right: 0;
+
+          @include mid-touch {
+            margin-bottom: 0;
+          }
+        }
+
+        [class^="icon-"] {
+          display: none;
+        }
+
+        &.ico-before {
+          [class^="icon-"] {
+            display: inline-block;
+            font-size: 24px !important;
+            top: 3px !important;
+          }
+        }
+
+        &:hover,
+        &:focus {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.secondary-button .btn.styled {
+      &:nth-of-type(1){
+        background: $buttonStyled-bg-color_hover;
+        border: $buttonStyled-border_hover;
+        color: $buttonStyled-linkcolor_hover !important;
+
+        &:hover {
+          background: $buttonStyled-bg-color;
+          border: $buttonStyled-border;
+          color: $buttonStyled-linkcolor !important;
+        }
+      }
+    }
+  }
+}
+
+@mixin styled {
+  background-color: $buttonStyled-bg-color;
+  color: $buttonStyled-linkcolor !important;
+  font-family: $button-fontfam;
+  font-size: em($buttonStyled-font-size);
+  padding: $buttonStyled-padding;
+
+  [class^="icon-"] {
+    font-size: em($buttonStyled-icon-size);
+    margin-left: $buttonStyled-icon-ml;
+    position: relative;
+    top: 2px;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: $buttonStyled-bg-color;
+    color: $buttonStyled-linkcolor_hover !important;
+    outline: none;
+  }
+}
+
+
+@mixin button-widescreen {
+  @include widescreen {
+    @if $mainParaSize2 {
+      font-size: em($mainParaSize2);
+    }
+  }
+}
+
+@mixin button-midtouch {
+  @include mid-touch {
+    @if $mainParaSize3 {
+      font-size: em($mainParaSize3);
+    }
+  }
+}
+
+@mixin button-phonewide {
+  @include phonewide {
+    @if $mainParaSize4 {
+      font-size: em($mainParaSize4);
+    }
+  }
+}
+
+/** Icon */
+@mixin icon {
+  [class^="icon-"],
+  [class*=" icon-"] {
+    font-size: 17px;
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+
+@mixin remove-btn-defaults {
+  button,
+  input[type="submit"],
+  input[type="reset"] {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    outline: inherit;
+    padding: 0;
+  }
+}

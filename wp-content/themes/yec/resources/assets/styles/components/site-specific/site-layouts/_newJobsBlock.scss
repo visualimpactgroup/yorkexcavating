@@ -1,0 +1,66 @@
+/* Hiring Block */
+section.newJobBlock {
+  background-color: #d61f27;
+  padding: 50px 0;
+  text-align: left;
+  width: 100%;
+
+  @include extrastopper {
+    padding: 20px 0;
+  }
+
+  @include touch {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #fff;
+    font-size: em(28);
+    font-weight: 500;
+    line-height: 42px;
+
+    @include touch {
+      font-size: em(24);
+      line-height: 32px;
+    }
+
+    strong {
+      color: $primary_link;
+    }
+  }
+
+  p {
+    color: #fff !important;
+  }
+
+  .button-block {
+    a.btn {
+      &.styled {
+        &:first-of-type {
+          background: transparent !important;
+          border-color: #fff !important;
+
+          &:hover,
+          &:focus {
+            background: #fff !important;
+            color: $primary_link !important;
+          }
+        }
+
+        &:nth-of-type(2) {
+          &:hover,
+          &:focus {
+            background: transparent;
+            border-color: #fff;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

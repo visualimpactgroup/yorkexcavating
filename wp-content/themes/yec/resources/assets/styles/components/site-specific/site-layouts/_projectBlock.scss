@@ -1,0 +1,296 @@
+/* projectBlock */
+.projectBlock {
+  display: inline-block;
+  font-family: $primaryFont;
+  padding: 50px 0 0 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  @include minimaxx {
+    padding: 30px 0 10px 0;
+  }
+
+  @include widescreen {
+    padding: 20px 0 10px 0;
+  }
+
+  .columns {
+    position: relative;
+
+    &.oversized {
+      max-width: 1600px !important;
+    }
+  }
+
+  .block-title {
+    color: #fff;
+    display: inline-block;
+    font-size: em(23);
+    font-weight: 400;
+    line-height: 30px;
+
+    @include widescreen {
+      width: 100%;
+    }
+
+    span {
+      color: #fff;
+      display: inline-block;
+      font-size: em(12);
+      padding-bottom: 2px;
+      width: 100%;
+    }
+  }
+
+  a.more {
+    color: #fff;
+    margin-top: 5px;
+    opacity: 0.7;
+    position: absolute;
+    right: 0;
+    @include transition;
+
+    [class^="icon-"] {
+      margin-left: 2px;
+      position: relative;
+      top: 2px;
+    }
+
+    @include minimaxx {
+      right: 15px;
+    }
+
+    @include widescreen {
+      display: inline-block;
+      position: relative;
+      right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  p {
+    @include main-p;
+    @include main-p-widescreen;
+    @include main-p-midtouch;
+    @include main-p-phonewide;
+    color: #fff;
+
+    br {
+      @include mid-touch {
+        display: none;
+      }
+    }
+  }
+
+  @include button;
+
+  ul.projects {
+    display: inline-block;
+    margin: -30px 0 0 0;
+    position: relative;
+    text-align: center;
+    top: 30px;
+    vertical-align: top;
+
+    @include minimaxx {
+      margin-top: 0;
+      top: 0;
+    }
+
+    li {
+      cursor: pointer;
+      display: grid;
+      float: left;
+      margin: 0 10px 20px 10px;
+      overflow: hidden;
+      text-align: center;
+      max-width: 31.9%;
+      @include transition;
+
+      @include minimaxx {
+        display: inline-block;
+        float: none;
+        max-width: 30%;
+      }
+
+      @include extrastopper {
+        max-width: 48%;
+        padding-bottom: 10px;
+      }
+
+      @include touch {
+        max-width: 45%;
+      }
+
+      @include mid-touch {
+        max-width: 100%;
+      }
+
+      &:hover,
+      &:focus {
+        background: rgba(241, 241, 241, 0.1);
+      }
+
+      .title {
+        color: #fff;
+        display: inline-block;
+        font-family: $primaryFont;
+        font-size: em(17);
+        font-weight: 700;
+        line-height: 20px;
+        margin: 0 0 10px 0;
+        width: 100%;
+
+        div {
+          font-size: em(15);
+          opacity: 0.6;
+          padding-top: 5px;
+        }
+      }
+
+      .page-sum {
+        display: inline-block;
+
+        p {
+          @include main-p;
+          font-size: em(15);
+          line-height: 28px;
+          padding-bottom: 0;
+
+          br {
+            display: none;
+          }
+        }
+      }
+
+      .thumbnail {
+        @include minimaxx {
+          max-height: 210px;
+          overflow: hidden;
+        }
+
+        @include mid-touch {
+          max-height: 300px;
+        }
+
+        @include phonewide {
+          max-height: 220px;
+        }
+
+        img {
+          display: block;
+        }
+      }
+
+      a {
+        display: inline-block;
+        max-height: 240px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        @include transition;
+
+        @include minimaxx {
+          max-height: 210px;
+        }
+
+        @include extrastopper {
+          height: auto;
+          overflow: visible;
+        }
+
+        .title {
+          background: rgba(0, 0, 0, 0.7);
+          bottom: -10px;
+          color: #fff;
+          left: 0;
+          padding: 10px 15px;
+          position: absolute;
+          @include transition;
+
+          @include extrastopper {
+            bottom: 0;
+            padding: 20px 15px;
+            position: relative;
+          }
+        }
+
+        &:hover,
+        &:focus {
+          .title {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &.service-projects {
+    background: $primary_link;
+    padding: 30px 0;
+    text-align: left;
+
+    @include phonewide {
+      padding: 20px 0 0 0 !important;
+    }
+
+    @include oddphone {
+      text-align: center;
+    }
+
+    .block-title {
+      font-weight: 700;
+    }
+
+    a.more {
+      @include widescreen {
+        position: absolute;
+      }
+
+      @include oddphone {
+        display: inline-block;
+        margin: 5px auto 0;
+        position: relative;
+        text-align: center;
+      }
+    }
+
+    ul.projects {
+      margin-left: 0;
+      padding-top: 20px;
+      text-align: left;
+
+      li {
+        margin-left: 0;
+        margin-right: 2%;
+
+        @include extrastopper {
+          width: 31%;
+        }
+
+        @include widescreen {
+          margin-right: 3%;
+        }
+
+        @include phonewide {
+          margin: 0 0 15px 0;
+          width: 100%;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+
+          @include phonewide {
+            margin: 0 0 15px 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

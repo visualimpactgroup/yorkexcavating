@@ -1,0 +1,90 @@
+$placeholder-color: rgba(217, 218, 220, 1);
+
+/** Form Classes */
+$form-title: 24;
+$form-title-weight: 500;
+$form-title-color: $primary_link;
+$form-label-color: #000;
+$form-label-font: $primaryFont;
+$form-label-size: 16;
+$form-label-padding: 5px 0 3px 0;
+$form-error: red;
+$form-example-color: #ccc;
+$form-example-size: 15;
+$form-example-style: normal;
+$form-info-color: $primary_link;
+$form-input-bg: transparent;
+$form-input-bg_hover: transparent;
+$form-input-b: 2px solid $placeholder-color;
+$form-input-bcolor_active: $primary_lightgrey;
+$form-input-bcolor_hover: $primary_lightgrey;
+$form-input-boxshadow: 0 4px 0 rgba(83, 82, 89, 0);
+$form-input-boxshadow_active: 0 4px 0 rgba(83, 82, 89, 0.4);
+$form-input-boxshadow_hover: 0 4px 0 rgba(83, 82, 89, 0.2);
+$form-input-color: #000;
+$form-input-font: $mainParaFont;
+$form-input-fontsize: 17;
+$form-input-fontweight: 500 !important;
+$form-input-padding: 12px;
+
+/** Custom Checkboxes */
+$checkbox-boxshadow: 0 4px 0 rgba(83, 82, 89, 0);
+$checkbox-boxshadow_active: 0 4px 0 rgba(83, 82, 89, 0.4);
+$checkbox-boxshadow_hover: 0 4px 0 rgba(83, 82, 89, 0.2);
+$checkbox-bg: $primary_link;
+$checkbox-bg_disabled: transparent;
+$checkbox-b: 1px solid $primary_lightgrey;
+$checkbox-b_disabled: 1px solid $primary_lightgrey;
+$checkbox-b-radius: 5px;
+$checkbox-bcolor_active: $primary_link;
+$checkbox-bcolor_hover: $primary_link;
+$checkbox-height: 30px;
+$checkbox-label-pleft: 40px;
+$checkbox-label-fsize: 16;
+$checkbox-width: 30px;
+$checkmark: '✔';
+$checkmark-color: #fff;
+$checkmark-color_disabled: $primary_lightgrey;
+$checkmark-size: 18;
+$checkmark-transition: all 0.2s;
+
+/** Custom Radio Buttons */
+$radio-boxshadow: 0 4px 0 rgba(83, 82, 89, 0);
+$radio-boxshadow_active: 0 4px 0 rgba(83, 82, 89, 0.4);
+$radio-boxshadow_hover: 0 4px 0 rgba(83, 82, 89, 0.2);
+$radio-bg: #000;
+$radio-bg_disabled: $primary_lightgrey;
+$radio-b: 2px solid $primary_lightgrey;
+$radio-b_disabled: 2px solid $primary_lightgrey;
+$radio-b-radius: 50%;
+$radio-bcolor_active: $primary_link;
+$radio-bcolor_hover: $primary_link;
+$radio-height: 20px;
+$radio-label-pleft: 28px;
+$radio-label-fsize: 16;
+$radio-width: 20px;
+$radio: '●';
+$radio-color: $paragraph-color;
+$radio-color_disabled: #666;
+$radio-size: 24;
+$radio-transition: all 0.2s;
+
+/** Form */
+$placeholder-color:               grey;
+$enews-input-bg:                  transparent;
+$enews-input-border:              2px solid #ccc;
+$enews-input-color:               #333;
+$enews-input-placeholder-color:   #ccc;
+$enews-input-font:                11;
+$enews-input-padding:             15px;
+$enews-input-width:               210px;
+$enews-button-width:              50px;
+$enews-label-color:               #9097a8;
+$enews-button-bg:                 transparent !important;
+$enews-button-bg_hover:           #fff;
+$enews-button-color:              #ccc;
+$enews-input-bg_focused:          transparent;
+$enews-button-border:             2px solid #ccc;
+$enews-button-borderrad:          0;
+$enews-button-i:                  $primary;
+$enews-button-i_hover:            #333;

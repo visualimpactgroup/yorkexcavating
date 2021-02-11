@@ -1,0 +1,1067 @@
+/** Typography */
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple');
+
+/* Hero H1 */
+@mixin hero-h1 {
+  font-family: $heroH1Font;
+
+  @if $heroH1Color {
+    color: $heroH1Color;
+  }
+
+  @if $heroH1FW {
+    font-weight: $heroH1FW;
+  }
+
+  @if $heroH1Size {
+    font-size: em($heroH1Size);
+  }
+
+  @if $heroH1LH {
+    line-height: $heroH1LH;
+  }
+
+  @if $heroH1Margin {
+    margin: $heroH1Margin;
+  }
+
+  @if $heroH1Padding {
+    padding: $heroH1Padding;
+  }
+}
+
+@mixin hero-h1-widescreen {
+  @include widescreen {
+    @if $heroH1Size2 {
+      font-size: em($heroH1Size2);
+    }
+
+    @if $heroH1LH2 {
+      line-height: $heroH1LH2;
+    }
+
+    @if $heroH1Margin2 {
+      margin: $heroH1Margin2;
+    }
+
+    @if $heroH1Padding2 {
+      padding: $heroH1Padding2;
+    }
+  }
+}
+
+@mixin hero-h1-midtouch {
+  @include mid-touch {
+    @if $heroH1Size3 {
+      font-size: em($heroH1Size3);
+    }
+
+    @if $heroH1LH3 {
+      line-height: $heroH1LH3;
+    }
+
+    @if $heroH1Margin3 {
+      margin: $heroH1Margin3;
+    }
+
+    @if $heroH1Padding3 {
+      padding: $heroH1Padding3;
+    }
+  }
+}
+
+@mixin hero-h1-phonewide {
+  @include phonewide {
+    @if $heroH1Size4 {
+      font-size: em($heroH1Size4);
+    }
+
+    @if $heroH1LH4 {
+      line-height: $heroH1LH4;
+    }
+
+    @if $heroH1Margin4 {
+      margin: $heroH1Margin4;
+    }
+
+    @if $heroH1Padding4 {
+      padding: $heroH1Padding4;
+    }
+  }
+}
+
+/* Main H1 */
+@mixin main-h1 {
+  font-family: $mainH1Font;
+
+  @if $mainH1Color {
+    color: $mainH1Color;
+
+    strong {
+      color: inherit;
+    }
+  }
+
+  @if $mainH1FW {
+    font-weight: $mainH1FW;
+  }
+
+  @if $mainH1Size {
+    font-size: $mainH1Size;
+  }
+
+  @if $mainH1LH {
+    line-height: $mainH1LH;
+  }
+
+  @if $mainH1Margin {
+    margin: $mainH1Margin;
+  }
+
+  @if $mainH1Padding {
+    padding: $mainH1Padding;
+  }
+
+  @if $mainH1Transform {
+    text-transform: $mainH1Transform;
+  }
+
+  @if $mainH1Style {
+    font-style: $mainH1Style;
+  }
+
+  @if $mainH1Spacing {
+    letter-spacing: $mainH1Spacing;
+  }
+}
+
+@mixin main-h1-widescreen {
+  @include widescreen {
+    @if $mainH1Size2 {
+      font-size: $mainH1Size2;
+    }
+
+    @if $mainH1LH2 {
+      line-height: $mainH1LH2;
+    }
+
+    @if $mainH1Margin2 {
+      margin: $mainH1Margin2;
+    }
+
+    @if $mainH1Padding2 {
+      padding: $mainH1Padding2;
+    }
+  }
+}
+
+@mixin main-h1-midtouch {
+  @include mid-touch {
+    @if $mainH1Size3 {
+      font-size: $mainH1Size3;
+    }
+
+    @if $mainH1LH3 {
+      line-height: $mainH1LH3;
+    }
+
+    @if $mainH1Margin3 {
+      margin: $mainH1Margin3;
+    }
+
+    @if $mainH1Padding3 {
+      padding: $mainH1Padding3;
+    }
+  }
+}
+
+@mixin main-h1-phonewide {
+  @include phonewide {
+    @if $mainH1Size4 {
+      font-size: $mainH1Size4;
+    }
+
+    @if $mainH1LH4 {
+      line-height: $mainH1LH4;
+    }
+
+    @if $mainH1Margin4 {
+      margin: $mainH1Margin4;
+    }
+
+    @if $mainH1Padding4 {
+      padding: $mainH1Padding4;
+    }
+  }
+}
+
+/* Welcome H1 */
+@mixin welcome-h1 {
+  font-family: $welcomeH1Font;
+
+  @if $welcomeH1Color {
+    color: $welcomeH1Color;
+  }
+
+  @if $welcomeH1FW {
+    font-weight: $welcomeH1FW;
+  }
+
+  @if $welcomeH1Size {
+    font-size: $welcomeH1Size;
+  }
+
+  @if $welcomeH1LH {
+    line-height: $welcomeH1LH;
+  }
+
+  @if $welcomeH1Margin {
+    margin: $welcomeH1Margin;
+  }
+
+  @if $welcomeH1Padding {
+    padding: $welcomeH1Padding;
+  }
+}
+
+@mixin welcome-h1-widescreen {
+  @include widescreen {
+    @if $welcomeH1Size2 {
+      font-size: $welcomeH1Size2;
+    }
+
+    @if $welcomeH1LH2 {
+      line-height: $welcomeH1LH2;
+    }
+
+    @if $welcomeH1Margin2 {
+      margin: $welcomeH1Margin2;
+    }
+
+    @if $welcomeH1Padding2 {
+      padding: $welcomeH1Padding2;
+    }
+  }
+}
+
+@mixin welcome-h1-midtouch {
+  @include mid-touch {
+    @if $welcomeH1Size3 {
+      font-size: $welcomeH1Size3;
+    }
+
+    @if $welcomeH1LH3 {
+      line-height: $welcomeH1LH3;
+    }
+
+    @if $welcomeH1Margin3 {
+      margin: $welcomeH1Margin3;
+    }
+
+    @if $welcomeH1Padding3 {
+      padding: $welcomeH1Padding3;
+    }
+  }
+}
+
+@mixin welcome-h1-phonewide {
+  @include phonewide {
+    @if $welcomeH1Size4 {
+      font-size: $welcomeH1Size4;
+    }
+
+    @if $welcomeH1LH4 {
+      line-height: $welcomeH1LH4;
+    }
+
+    @if $welcomeH1Margin4 {
+      margin: $welcomeH1Margin4;
+    }
+
+    @if $welcomeH1Padding4 {
+      padding: $welcomeH1Padding4;
+    }
+  }
+}
+
+/* Welcome h2 */
+@mixin welcome-h2 {
+  font-family: $welcomeH2Font;
+
+  @if $welcomeH2Color {
+    color: $welcomeH2Color;
+  }
+
+  @if $welcomeH2FW {
+    font-weight: $welcomeH2FW;
+  }
+
+  @if $welcomeH2Size {
+    font-size: $welcomeH2Size;
+  }
+
+  @if $welcomeH2LH {
+    line-height: $welcomeH2LH;
+  }
+
+  @if $welcomeH2Margin {
+    margin: $welcomeH2Margin;
+  }
+
+  @if $welcomeH2Padding {
+    padding: $welcomeH2Padding;
+  }
+}
+
+@mixin welcome-h2-widescreen {
+  @include widescreen {
+    @if $welcomeH2Size2 {
+      font-size: $welcomeH2Size2;
+    }
+
+    @if $welcomeH2LH2 {
+      line-height: $welcomeH2LH2;
+    }
+
+    @if $welcomeH2Margin2 {
+      margin: $welcomeH2Margin2;
+    }
+
+    @if $welcomeH2Padding2 {
+      padding: $welcomeH2Padding2;
+    }
+  }
+}
+
+@mixin welcome-h2-midtouch {
+  @include mid-touch {
+    @if $welcomeH2Size3 {
+      font-size: $welcomeH2Size3;
+    }
+
+    @if $welcomeH2LH3 {
+      line-height: $welcomeH2LH3;
+    }
+
+    @if $welcomeH2Margin3 {
+      margin: $welcomeH2Margin3;
+    }
+
+    @if $welcomeH2Padding3 {
+      padding: $welcomeH2Padding3;
+    }
+  }
+}
+
+@mixin welcome-h2-phonewide {
+  @include phonewide {
+    @if $welcomeH2Size4 {
+      font-size: $welcomeH2Size4;
+    }
+
+    @if $welcomeH2LH4 {
+      line-height: $welcomeH2LH4;
+    }
+
+    @if $welcomeH2Margin4 {
+      margin: $welcomeH2Margin4;
+    }
+
+    @if $welcomeH2Padding4 {
+      padding: $welcomeH2Padding4;
+    }
+  }
+}
+
+/* Welcome h2 */
+@mixin welcome-h3 {
+  font-family: $welcomeH3Font;
+
+  @if $welcomeH3Color {
+    color: $welcomeH3Color;
+  }
+
+  @if $welcomeH3FW {
+    font-weight: $welcomeH3FW;
+  }
+
+  @if $welcomeH3Size {
+    font-size: $welcomeH3Size;
+  }
+
+  @if $welcomeH3LH {
+    line-height: $welcomeH3LH;
+  }
+
+  @if $welcomeH3Margin {
+    margin: $welcomeH3Margin;
+  }
+
+  @if $welcomeH3Padding {
+    padding: $welcomeH3Padding;
+  }
+}
+
+@mixin welcome-h3-widescreen {
+  @include widescreen {
+    @if $welcomeH3Size2 {
+      font-size: $welcomeH3Size2;
+    }
+
+    @if $welcomeH3LH2 {
+      line-height: $welcomeH3LH2;
+    }
+
+    @if $welcomeH3Margin2 {
+      margin: $welcomeH3Margin2;
+    }
+
+    @if $welcomeH3Padding2 {
+      padding: $welcomeH3Padding2;
+    }
+  }
+}
+
+@mixin welcome-h3-midtouch {
+  @include mid-touch {
+    @if $welcomeH3Size3 {
+      font-size: $welcomeH3Size3;
+    }
+
+    @if $welcomeH3LH3 {
+      line-height: $welcomeH3LH3;
+    }
+
+    @if $welcomeH3Margin3 {
+      margin: $welcomeH3Margin3;
+    }
+
+    @if $welcomeH3Padding3 {
+      padding: $welcomeH3Padding3;
+    }
+  }
+}
+
+@mixin welcome-h3-phonewide {
+  @include phonewide {
+    @if $welcomeH3Size4 {
+      font-size: $welcomeH3Size4;
+    }
+
+    @if $welcomeH3LH4 {
+      line-height: $welcomeH3LH4;
+    }
+
+    @if $welcomeH3Margin4 {
+      margin: $welcomeH3Margin4;
+    }
+
+    @if $welcomeH3Padding4 {
+      padding: $welcomeH3Padding4;
+    }
+  }
+}
+
+/* Welcome h4 */
+@mixin welcome-h4 {
+  font-family: $welcomeH4Font;
+
+  @if $welcomeH4Color {
+    color: $welcomeH4Color;
+  }
+
+  @if $welcomeH4FW {
+    font-weight: $welcomeH4FW;
+  }
+
+  @if $welcomeH4Size {
+    font-size: $welcomeH4Size;
+  }
+
+  @if $welcomeH4LH {
+    line-height: $welcomeH4LH;
+  }
+
+  @if $welcomeH4Margin {
+    margin: $welcomeH4Margin;
+  }
+
+  @if $welcomeH4Padding {
+    padding: $welcomeH4Padding;
+  }
+}
+
+@mixin welcome-h4-widescreen {
+  @include widescreen {
+    @if $welcomeH4Size2 {
+      font-size: $welcomeH4Size2;
+    }
+
+    @if $welcomeH4LH2 {
+      line-height: $welcomeH4LH2;
+    }
+
+    @if $welcomeH4Margin2 {
+      margin: $welcomeH4Margin2;
+    }
+
+    @if $welcomeH4Padding2 {
+      padding: $welcomeH4Padding2;
+    }
+  }
+}
+
+@mixin welcome-h4-midtouch {
+  @include mid-touch {
+    @if $welcomeH4Size3 {
+      font-size: $welcomeH4Size3;
+    }
+
+    @if $welcomeH4LH3 {
+      line-height: $welcomeH4LH3;
+    }
+
+    @if $welcomeH4Margin3 {
+      margin: $welcomeH4Margin3;
+    }
+
+    @if $welcomeH4Padding3 {
+      padding: $welcomeH4Padding3;
+    }
+  }
+}
+
+@mixin welcome-h4-phonewide {
+  @include phonewide {
+    @if $welcomeH4Size4 {
+      font-size: $welcomeH4Size4;
+    }
+
+    @if $welcomeH4LH4 {
+      line-height: $welcomeH4LH4;
+    }
+
+    @if $welcomeH4Margin4 {
+      margin: $welcomeH4Margin4;
+    }
+
+    @if $welcomeH4Padding4 {
+      padding: $welcomeH4Padding4;
+    }
+  }
+}
+
+
+
+/* Main H2 */
+@mixin main-h2 {
+  font-family: $mainH2Font;
+
+  @if $mainH2Color {
+    color: $mainH2Color;
+  }
+
+  @if $mainH2FW {
+    font-weight: $mainH2FW;
+  }
+
+  @if $mainH2Size {
+    font-size: em($mainH2Size);
+  }
+
+  @if $mainH2LH {
+    line-height: $mainH2LH;
+  }
+
+  @if $mainH2Margin {
+    margin: $mainH2Margin;
+  }
+
+  @if $mainH2Padding {
+    padding: $mainH2Padding;
+  }
+
+  @if $mainH2Transform {
+    text-transform: $mainH2Transform;
+  }
+
+  @if $mainH2Style {
+    font-style: $mainH2Style;
+  }
+
+  @if $mainH2Spacing {
+    letter-spacing: $mainH2Spacing;
+  }
+}
+
+@mixin main-h2-widescreen {
+  @include widescreen {
+    @if $mainH2Size2 {
+      font-size: em($mainH2Size2);
+    }
+
+    @if $mainH2LH2 {
+      line-height: $mainH2LH2;
+    }
+
+    @if $mainH2Margin2 {
+      margin: $mainH2Margin2;
+    }
+
+    @if $mainH2Padding2 {
+      padding: $mainH2Padding2;
+    }
+  }
+}
+
+@mixin main-h2-midtouch {
+  @include mid-touch {
+    @if $mainH2Size3 {
+      font-size: em($mainH2Size3);
+    }
+
+    @if $mainH2LH3 {
+      line-height: $mainH2LH3;
+    }
+
+    @if $mainH2Margin3 {
+      margin: $mainH2Margin3;
+    }
+
+    @if $mainH2Padding3 {
+      padding: $mainH2Padding3;
+    }
+  }
+}
+
+@mixin main-h2-phonewide {
+  @include phonewide {
+    @if $mainH2Size4 {
+      font-size: em($mainH2Size4);
+    }
+
+    @if $mainH2LH4 {
+      line-height: $mainH2LH4;
+    }
+
+    @if $mainH2Margin4 {
+      margin: $mainH2Margin4;
+    }
+
+    @if $mainH2Padding4 {
+      padding: $mainH2Padding4;
+    }
+  }
+}
+
+/* Main H3 */
+@mixin main-h3 {
+  font-family: $mainH3Font;
+
+  @if $mainH3Color {
+    color: $mainH3Color;
+  }
+
+  @if $mainH3FW {
+    font-weight: $mainH3FW;
+  }
+
+  @if $mainH3Size {
+    font-size: em($mainH3Size);
+  }
+
+  @if $mainH3LH {
+    line-height: $mainH3LH;
+  }
+
+  @if $mainH3Margin {
+    margin: $mainH3Margin;
+  }
+
+  @if $mainH3Padding {
+    padding: $mainH3Padding;
+  }
+}
+
+@mixin main-h3-widescreen {
+  @include widescreen {
+    @if $mainH3Size2 {
+      font-size: em($mainH3Size2);
+    }
+
+    @if $mainH3LH2 {
+      line-height: $mainH3LH2;
+    }
+
+    @if $mainH3Margin2 {
+      margin: $mainH3Margin2;
+    }
+
+    @if $mainH3Padding2 {
+      padding: $mainH3Padding2;
+    }
+  }
+}
+
+@mixin main-h3-midtouch {
+  @include mid-touch {
+    @if $mainH3Size3 {
+      font-size: em($mainH3Size3);
+    }
+
+    @if $mainH3LH3 {
+      line-height: $mainH3LH3;
+    }
+
+    @if $mainH3Margin3 {
+      margin: $mainH3Margin3;
+    }
+
+    @if $mainH3Padding3 {
+      padding: $mainH3Padding3;
+    }
+  }
+}
+
+@mixin main-h3-phonewide {
+  @include phonewide {
+    @if $mainH3Size4 {
+      font-size: em($mainH3Size4);
+    }
+
+    @if $mainH3LH4 {
+      line-height: $mainH3LH4;
+    }
+
+    @if $mainH3Margin4 {
+      margin: $mainH3Margin4;
+    }
+
+    @if $mainH3Padding4 {
+      padding: $mainH3Padding4;
+    }
+  }
+}
+
+/* Main h4 */
+@mixin main-h4 {
+  font-family: $mainh4Font;
+
+  @if $mainh4Color {
+    color: $mainh4Color;
+  }
+
+  @if $mainh4FW {
+    font-weight: $mainh4FW;
+  }
+
+  @if $mainh4Size {
+    font-size: em($mainh4Size);
+  }
+
+  @if $mainh4LH {
+    line-height: $mainh4LH;
+  }
+
+  @if $mainh4Margin {
+    margin: $mainh4Margin;
+  }
+
+  @if $mainh4Padding {
+    padding: $mainh4Padding;
+  }
+}
+
+@mixin main-h4-widescreen {
+  @include widescreen {
+    @if $mainh4Size2 {
+      font-size: em($mainh4Size2);
+    }
+
+    @if $mainh4LH2 {
+      line-height: $mainh4LH2;
+    }
+
+    @if $mainh4Margin2 {
+      margin: $mainh4Margin2;
+    }
+
+    @if $mainh4Padding2 {
+      padding: $mainh4Padding2;
+    }
+  }
+}
+
+@mixin main-h4-midtouch {
+  @include mid-touch {
+    @if $mainh4Size3 {
+      font-size: em($mainh4Size3);
+    }
+
+    @if $mainh4Lh4 {
+      line-height: $mainh4Lh4;
+    }
+
+    @if $mainh4Margin3 {
+      margin: $mainh4Margin3;
+    }
+
+    @if $mainh4Padding3 {
+      padding: $mainh4Padding3;
+    }
+  }
+}
+
+@mixin main-h4-phonewide {
+  @include phonewide {
+    @if $mainh4Size4 {
+      font-size: em($mainh4Size4);
+    }
+
+    @if $mainh4LH4 {
+      line-height: $mainh4LH4;
+    }
+
+    @if $mainh4Margin4 {
+      margin: $mainh4Margin4;
+    }
+
+    @if $mainh4Padding4 {
+      padding: $mainh4Padding4;
+    }
+  }
+}
+
+/* Main Paragraph */
+@mixin main-p {
+  font-family: $mainParaFont;
+
+  @if $mainParaColor {
+    color: $mainParaColor;
+  }
+
+  @if $mainParaFW {
+    font-weight: $mainParaFW;
+  }
+
+  @if $mainParaSize {
+    font-size: em($mainParaSize);
+  }
+
+  @if $mainParaLH {
+    line-height: $mainParaLH;
+  }
+
+  @if $mainParaMargin {
+    margin: $mainParaMargin;
+  }
+
+  @if $mainParaPadding {
+    padding: $mainParaPadding;
+  }
+
+  a {
+    color: $mainParaColorLink;
+    transition: $linkTransition;
+
+    &:hover {
+      color: $mainParaColorLinkHover;
+    }
+  }
+}
+
+@mixin main-p-widescreen {
+  @include widescreen {
+    @if $mainParaSize2 {
+      font-size: em($mainParaSize2);
+    }
+
+    @if $mainParaLH2 {
+      line-height: $mainParaLH2;
+    }
+
+    @if $mainParaMargin2 {
+      margin: $mainParaMargin2;
+    }
+
+    @if $mainParaPadding2 {
+      padding: $mainParaPadding2;
+    }
+  }
+}
+
+@mixin main-p-midtouch {
+  @include mid-touch {
+    @if $mainParaSize3 {
+      font-size: em($mainParaSize3);
+    }
+
+    @if $mainParaLH3 {
+      line-height: $mainParaLH3;
+    }
+
+    @if $mainParaMargin3 {
+      margin: $mainParaMargin3;
+    }
+
+    @if $mainParaPadding3 {
+      padding: $mainParaPadding3;
+    }
+  }
+}
+
+@mixin main-p-phonewide {
+  @include phonewide {
+    @if $mainParaSize4 {
+      font-size: em($mainParaSize4);
+    }
+
+    @if $mainParaLH4 {
+      line-height: $mainParaLH4;
+    }
+
+    @if $mainParaMargin4 {
+      margin: $mainParaMargin4;
+    }
+
+    @if $mainParaPadding4 {
+      padding: $mainParaPadding4;
+    }
+  }
+}
+
+/* Small Paragraph */
+@mixin sm-p {
+  font-family: $smParaFont;
+
+  @if $smParaColor {
+    color: $smParaColor;
+  }
+
+  @if $smParaFW {
+    font-weight: $smParaFW;
+  }
+
+  @if $smParaSize {
+    font-size: em($smParaSize);
+  }
+
+  @if $smParaLH {
+    line-height: $smParaLH;
+  }
+
+  @if $smParaMargin {
+    margin: $smParaMargin;
+  }
+
+  @if $smParaPadding {
+    padding: $smParaPadding;
+  }
+
+  a {
+    color: $smParaColorLink;
+    transition: $linkTransition;
+
+    &:hover {
+      color: $smParaColorLinkHover;
+    }
+  }
+}
+
+@mixin sm-p-widescreen {
+  @include widescreen {
+    @if $smParaSize2 {
+      font-size: em($smParaSize2);
+    }
+
+    @if $smParaLH2 {
+      line-height: $smParaLH2;
+    }
+
+    @if $smParaMargin2 {
+      margin: $smParaMargin2;
+    }
+
+    @if $smParaPadding2 {
+      padding: $smParaPadding2;
+    }
+  }
+}
+
+@mixin sm-p-midtouch {
+  @include mid-touch {
+    @if $smParaSize3 {
+      font-size: em($smParaSize3);
+    }
+
+    @if $smParaLH3 {
+      line-height: $smParaLH3;
+    }
+
+    @if $smParaMargin3 {
+      margin: $smParaMargin3;
+    }
+
+    @if $smParaPadding3 {
+      padding: $smParaPadding3;
+    }
+  }
+}
+
+@mixin sm-p-phonewide {
+  @include phonewide {
+    @if $smParaSize4 {
+      font-size: em($smParaSize4);
+    }
+
+    @if $smParaLH4 {
+      line-height: $smParaLH4;
+    }
+
+    @if $smParaMargin4 {
+      margin: $smParaMargin4;
+    }
+
+    @if $smParaPadding4 {
+      padding: $smParaPadding4;
+    }
+  }
+}
+
+/* Continue Reading */
+@mixin continue {
+  font-family: $smParaFont;
+
+  @if $smParaFW {
+    font-weight: $smParaFW;
+  }
+
+  @if $smParaSize {
+    font-size: em($smParaSize);
+  }
+}
+
+@mixin continue-widescreen {
+  @include widescreen {
+    @if $smParaSize2 {
+      font-size: em($smParaSize2);
+    }
+  }
+}
+
+@mixin continue-midtouch {
+  @include mid-touch {
+    @if $smParaSize3 {
+      font-size: em($smParaSize3);
+    }
+  }
+}
+
+@mixin continue-phonewide {
+  @include phonewide {
+    @if $smParaSize4 {
+      font-size: em($smParaSize4);
+    }
+  }
+}

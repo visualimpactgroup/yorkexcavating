@@ -1,0 +1,290 @@
+/* Staff */
+.staff.layout-builder {
+  padding-top: 30px;
+  .section-title,
+  .section-cont {
+    text-align: center !important;
+  }
+
+  .section-title {
+    @include main-h2;
+    @include main-h2-widescreen;
+    @include main-h2-midtouch;
+    @include main-h2-phonewide;
+  }
+
+  .section-content {
+    margin-bottom: -5px;
+    text-align: center;
+
+    p {
+      @include main-p;
+      @include main-p-widescreen;
+      @include main-p-midtouch;
+      @include main-p-phonewide;
+    }
+  }
+
+  .staff-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0 !important;
+    padding: 20px 0 0 0;
+    width: 100%;
+
+    li.staff-member {
+      justify-content: space-between;
+      display: flex;
+      font-family: $primaryFont;
+      margin: 0;
+      padding: 0 20px 40px 0;
+      position: relative;
+      vertical-align: top;
+      width: 30%;
+
+      @include touch {
+        display: inline-block !important;
+        padding: 0 15px 0 15px;
+        width: 100%;
+      }
+
+      .staff-image {
+        bottom: 0;
+        left: -45px;
+        position: absolute;
+        top: 50px;
+
+        @include touch {
+          left: 0;
+          position: relative;
+          right: 0;
+          top: 30px;
+          width: 100%;
+        }
+
+        div {
+          display: inline-block;
+          height: 110px;
+          padding: 5px;
+          width: 110px;
+          @include total-centered;
+
+          @include touch {
+            margin: 0 auto;
+          }
+
+          img {
+            border-radius: 50%;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      .staff-info {
+        background: #f6f3f3;
+        float: right;
+        margin: 30px 10px 0 10px;
+        padding: 20px 20px 20px 70px;
+        width: 85%;
+
+        @include touch {
+          float: left;
+          margin: 0;
+          padding: 40px 20px 20px 20px;
+          text-align: center;
+          width: 100%;
+        }
+
+        .name {
+          font-size: em(16);
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+
+        .title {
+          display: inline-block;
+          float: left;
+
+          @include touch {
+            float: none;
+            width: 100%;
+          }
+        }
+
+        .title,
+        .bio {
+          @include main-p;
+          @include main-p-widescreen;
+          @include main-p-midtouch;
+          @include main-p-phonewide;
+          clear: both;
+          font-size: 80%;
+          padding-bottom: 2px;
+          position: relative;
+          top: -10px;
+        }
+
+        .bio {
+          p {
+            font-size: em(14);
+            line-height: 24px !important;
+            padding-bottom: 2px;
+          }
+        }
+
+        ul.connect {
+          display: inline-block;
+          float: left;
+          list-style-type: none;
+          margin-left: 5px;
+          margin-top: 5px;
+          position: relative;
+          top: -3px;
+
+          @include touch {
+            float: none;
+            width: 100%;
+          }
+
+          li {
+            border: 1px solid #666;
+            border-radius: 50%;
+            display: inline-block;
+            height: 20px;
+            margin-left: 5px;
+            margin-right: 0;
+            opacity: 0.5;
+            overflow: hidden;
+            position: relative;
+            width: 20px;
+            @include total-centered;
+            @include transition;
+
+            @include touch {
+              margin: 5px 0;
+            }
+
+            &:hover,
+            &:focus {
+              background-color: #666;
+
+              a {
+                [class^="icon-"] {
+                  color: #f6f3f3;
+                }
+              }
+            }
+
+            a {
+              @include total-centered;
+              bottom: 0;
+              height: 100%;
+              left: 0;
+              position: absolute;
+              right: 0;
+              text-align: center;
+              top: 0;
+
+              [class^="icon-"] {
+                font-size: 10px;
+              }
+            }
+
+            &:last-of-type {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+/* modal styles */
+.bio-modal {
+  top: 50px;
+  max-width: 600px !important;
+
+  .staff-member {
+    display: inline-block;
+    padding-bottom: 10px;
+    width: 100%;
+
+    .staff-image {
+      display: inline-block;
+      float: left;
+      position: relative;
+
+      img {
+        border-radius: 100%;
+        display: block;
+        position: relative;
+        text-align: center;
+        width: 100px;
+        z-index: 2;
+      }
+    }
+
+    .staff-info {
+      display: inline-block;
+      float: left;
+      padding-left: 15px;
+
+      .name {
+        @include main-h2;
+        @include main-h2-widescreen;
+        @include main-h2-midtouch;
+        @include main-h2-phonewide;
+
+        padding-bottom: 0;
+      }
+
+      .title {
+        color: #333;
+        font-size: em(17);
+        line-height: 24px;
+      }
+
+      a.email {
+        color: #666;
+        font-size: em(15);
+        font-weight: 600;
+        position: relative;
+        top: -12px;
+
+        &:hover,
+        &:focus {
+          color: $primary_hover;
+        }
+      }
+    }
+  }
+
+  .staff-desc {
+    .bio-content {
+      @include main-p;
+      @include main-p-widescreen;
+      @include main-p-midtouch;
+      @include main-p-phonewide;
+
+      p {
+        padding-bottom: 10px;
+
+        em {
+          font-weight: 600;
+        }
+      }
+
+      ul {
+        list-style-type: square;
+        margin-left: 20px;
+        position: relative;
+        top: -5px;
+      }
+    }
+  }
+}

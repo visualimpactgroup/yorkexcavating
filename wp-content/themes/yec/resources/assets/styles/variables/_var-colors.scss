@@ -1,0 +1,32 @@
+/** Brand Colors  */
+$yecRed:                            #c80404;
+$yecBlack:                          rgba(0, 0, 0, 1);
+$yecText:                           rgba(0, 0, 0, 1);
+$yecGrey:                           rgba(40, 40, 40, 1);
+
+/** Colors */
+$primary:                           $yecBlack;
+$primary_link:                      $yecRed;
+$primary_hover:                     $yecBlack;
+$primary_brand-hover:               $yecRed;
+$primary_grey:                      #797474;
+$primary_para:                      #666;
+$primary_lightgrey:                 #f1f1f1;
+$primary_highlight:                 $yecRed;
+$secondary_brand:                   $yecBlack;
+$secondary_brand-hover:             $yecRed;
+$body_background:                   #fff;
+$header_background:                 rgba(255, 255, 255, 1);
+$orange:                            #cc9900;
+$white:                             #fff;
+$sixes:                             rgb(102, 102, 102);
+$primary-border_color:              $primary_link;
+$primary-divirder_color:            #dedcdc;
+$circle:                            rgba(106, 180, 53, 0.3);
+$primary_title:                     $primary_hover;
+$linktransition:                    all 0.2s linear;
+$paragraph-color:                   $primary;
+$main-nav-color:                    $primary;
+$main-nav-color_hover:              $primary_link;
+$footerPrimaryColor:                #282828;
+$footerCopyrightColor:              rgba(0, 0, 0, 1);

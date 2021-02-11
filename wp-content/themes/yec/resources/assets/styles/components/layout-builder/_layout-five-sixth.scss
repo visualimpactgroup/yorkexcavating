@@ -1,0 +1,18 @@
+/* Five Sixth Layout */
+.five-sixth {
+  &.left-media {
+    height: auto;
+
+    @include touch {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &.right-media {
+    flex-direction: row-reverse;
+  }
+
+  .button-block {
+    padding-top: 20px;
+  }
+}

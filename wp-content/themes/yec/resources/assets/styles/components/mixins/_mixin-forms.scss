@@ -1,0 +1,100 @@
+/** Form Mixins */
+@mixin visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+}
+
+/** Placeholders */
+@mixin input-placeholder() {
+    $selector: '';
+    $prefixes: (
+        moz: "::-moz",
+        webkit: "::-webkit",
+        ie: ":-ms"
+    );
+    @each $prop, $value in $prefixes {
+        @if $prop != "moz" {
+            $selector: #{$value}-input-placeholder;
+        } @else {
+            $selector: #{$value}-placeholder;
+        }
+        @if & {
+            &#{$selector} {
+                @content;
+            }
+        } @else {
+            #{$selector} {
+                @content;
+            }
+        }
+    }
+    &::placeholder {
+      @content;
+    }
+}
+
+
+input,
+textarea {
+  @include input-placeholder {
+    color: $placeholder-color;
+  }
+
+  &:active,
+  &:focus {
+    @include input-placeholder {
+      color: $form-input-color;
+    }
+  }
+}
+
+
+@mixin enewsForm {
+  .eform-block {
+    position: relative;
+
+    input {
+      border: $enews-input-border;
+      color: $enews-input-color;
+      font-family: $primaryFont;
+      font-size: em($enews-input-font);
+      padding: $enews-input-padding;
+      width: $enews-input-width;
+
+      @include input-placeholder {
+        color: $enews-input-placeholder-color !important;
+      }
+    }
+
+    button,
+    input[type="button"] {
+      background-color: $enews-input-bg;
+      border: $enews-input-border;
+      border-radius: $enews-button-borderrad;
+      bottom: 0;
+      color: #666 !important;
+      cursor: pointer;
+      margin-left: -1px;
+      position: absolute;
+      top: 0;
+      width: $enews-button-width;
+      @include transition;
+
+      [class^="icon-"] {
+        font-size: 20px;
+      }
+
+      &:hover {
+        background: $enews-button-bg_hover !important;
+
+        [class^="icon-"] {
+          color: $enews-button-i_hover !important;
+        }
+      }
+    }
+  }
+}

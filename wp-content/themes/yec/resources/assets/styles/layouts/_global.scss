@@ -1,0 +1,884 @@
+/** Global Styles in Main Content Div */
+/* Global Classes */
+html,
+a,
+div,
+section,
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+form,
+p,
+ul,
+li,
+img {
+  outline: none;
+}
+
+ul {
+  &.doubled {
+    li {
+      display: inline-block;
+      padding-left: 5px;
+      width: 48%;
+
+      @include touch {
+        padding-left: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  &.checkmark {
+    li {
+      margin-left: 27px;
+      position: relative;
+
+      &:before {
+        color: $orange;
+        content: '\e9ed';
+        display: inline;
+        font-size: 20px;
+        font-family: $icoMoon;
+        height: 25px;
+        margin-left: -30px;
+        margin-top: 0px;
+        position: absolute;
+        width: 25px;
+      }
+    }
+
+    &.doubled {
+      li {
+        width: 40%;
+      }
+    }
+  }
+
+  &.links {
+    li {
+      position: relative;
+
+      a {
+        color: $orange !important;
+
+        &:hover {
+          color: #333 !important;
+        }
+      }
+
+      &:after {
+        color: $orange;
+        content: '\e94d';
+        display: inline;
+        font-size: 13px;
+        font-family: $icoMoon;
+        height: 25px;
+        margin-left: 3px;
+        margin-top: 2px;
+        position: absolute;
+        width: 25px;
+      }
+    }
+
+    &.doubled {
+      li {
+        width: 40%;
+      }
+    }
+  }
+}
+
+p {
+  a {
+    color: $primary_link;
+    text-decoration: underline;
+    @include transition;
+
+    &:hover,
+    &:focus {
+      color: #333;
+      text-decoration: none;
+    }
+  }
+}
+
+.centered-link {
+  color: $primary_link;
+  display: inline-block;
+  margin: 20px auto;
+
+  @include transition;
+
+  &:hover {
+    color: $primary_hover;
+  }
+}
+
+
+.view-all {
+  color: $copyright-nav-color_hover;
+  display: inline-block;
+  font-size: em(14);
+  margin-top: 5px;
+  @include transition;
+
+  [class^="icon-"] {
+    font-size: 10px;
+  }
+
+  &.fr {
+    float: right;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: #666;
+  }
+}
+
+/* Main Classes */
+.main-content {
+  position: relative;
+  z-index: 1;
+
+  &.internal-content {
+    &.centered-content {
+      position: relative;
+      text-align: center;
+    }
+
+    .white-block {
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 10px, 0.5);
+      margin: -50px auto 20px;
+      position: relative;
+      max-width: 1440px;
+      padding: 30px;
+      z-index: 10;
+
+      .button-block {
+        display: inline-block;
+        margin-top: 5px;
+        padding-bottom: 10px;
+
+        a.btn {
+          float: left;
+          font-family: $button-fontfam !important;
+          font-size: em($buttonStyled-font-size);
+          font-style: $primaryFont;
+          font-weight: 700;
+          padding: 10px 15px;
+          text-transform: none;
+          @include transition;
+
+          &:nth-of-type(1) {
+            background-color: $buttonStyled-linkcolor;
+            border: 1px solid $buttonStyled-linkcolor;
+            color: #fff !important;
+            margin-right: 15px;
+
+            &:hover {
+              background: #fff;
+              border-color: $buttonStyled-linkcolor !important;
+              color: $buttonStyled-linkcolor !important;
+            }
+          }
+
+          &:nth-of-type(2) {
+            background: transparent;
+            border: 1px solid $buttonStyled-linkcolor;
+            color: $buttonStyled-linkcolor !important;
+
+            &:hover {
+              background-color: $buttonStyled-linkcolor !important;
+              border: 1px solid $buttonStyled-linkcolor !important;
+              color: #fff !important;
+            }
+          }
+        }
+      }
+    }
+
+    /* primary font styles */
+    h1 {
+      @include main-h1;
+      @include main-h1-widescreen;
+      @include main-h1-midtouch;
+      @include main-h1-phonewide;
+
+      strong {
+        color: inherit;
+      }
+    }
+
+    h2 {
+      @include main-h2;
+      @include main-h2-widescreen;
+      @include main-h2-midtouch;
+      @include main-h2-phonewide;
+
+      strong {
+        color: inherit;
+      }
+    }
+
+    h3 {
+      @include main-h3;
+      @include main-h3-widescreen;
+      @include main-h3-midtouch;
+      @include main-h3-phonewide;
+
+      strong {
+        color: inherit;
+      }
+    }
+
+    p {
+      @include main-p;
+      @include main-p-widescreen;
+      @include main-p-midtouch;
+      @include main-p-phonewide;
+
+      strong {
+        color: inherit;
+        font-weight: 700;
+      }
+    }
+
+    ul {
+      @include listDefaults;
+
+      margin: 0 0 0 5px;
+
+      @include widescreen {
+        margin: 0 0 0 20px;
+      }
+
+      &.dual-column {
+        margin-top: 10px;
+
+        li {
+          width: 45%;
+        }
+      }
+    }
+
+    @include button;
+
+    img {
+      &.alignright {
+        float: right;
+        margin: 0 0 15px 10px;
+        padding: 5px;
+        border: 1px solid #f1f1f1;
+
+        @include oddphone {
+          clear: both;
+          display: block;
+          float: none;
+          margin: 5px 0 10px 0;
+        }
+      }
+
+      &.alignleft {
+        float: left;
+        margin: 0 15px 10px 0;
+        padding: 5px;
+        border: 1px solid #f1f1f1;
+
+        @include oddphone {
+          clear: both;
+          display: block;
+          float: none;
+          margin: 5px 0 10px 0;
+        }
+      }
+    }
+  }
+
+  .site-nav-blocks {
+    border-top: 1px solid #f1f1f1;
+    padding: 25px 0 10px 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+
+    &.whitebg {
+      background: #fff;
+    }
+
+    &.internalpages {
+      border-top: 0;
+      margin-top: -50px;
+      padding-top: 0;
+
+      @include phonewide {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+
+    ul.nav-blocks {
+      display: -webkit-flex;
+      margin-left: 0;
+      margin-top: 15px;
+      position: relative;
+      z-index: 10;
+
+      &.childpages {
+        flex-wrap: wrap;
+
+        li {
+          background-position: center center;
+          background-size: cover;
+          border-radius: 20px;
+          display: inline-block !important;
+          height: 600px;
+          margin-bottom: 10px;
+          padding: 10px 10px 15px 10px;
+          -webkit-flex: none;
+          width: 32%;
+
+          &.fullWidth {
+            background: none;
+            border-radius: 0;
+            height: auto;
+            margin-bottom: -12px;
+            width: 100%;
+
+            .content {
+              display: inline-block;
+              float: right;
+              padding: 100px 100px 50px 0;
+              position: relative;
+              width: 50%;
+
+              h3 {
+                a {
+                  color: $primary_link;
+                  @include transition;
+
+                  &:hover,
+                  &:focus {
+                    color: $primary_hover;
+                  }
+                }
+              }
+
+              p {
+                color: $primary_hover;
+              }
+
+              .button-block {
+                padding: 0;
+                width: 100%;
+
+                &.alignleft {
+                  a.more {
+                    display: inline-block;
+                    float: left;
+                    margin-right: 20px;
+                    width: auto;
+
+                    &:last-of-type {
+                      margin-right: 0;
+                    }
+                  }
+                }
+
+                a.more {
+                  color: $primary_link;
+                  top: 0;
+
+                  &:focus,
+                  &:hover {
+                    color: $primary_hover;
+                  }
+                }
+              }
+            }
+
+            .image-col {
+              display: inline-block;
+              float: left;
+              position: relative;
+              width: 47%;
+
+              .callout-image {
+                bottom: -20px;
+                position: absolute;
+                z-index: 2;
+              }
+
+              .bg-image {
+                position: relative;
+                z-index: 1;
+              }
+            }
+          }
+
+          &.staggered {
+            width: 100% !important;
+
+            .image-holder {
+              display: inline-block;
+              float: left;
+              height: 300px;
+              width: 350px;
+
+              @include mid-touch {
+                display: inline-block;
+                max-width: 300px;
+                height: auto;
+                width: 90%;
+              }
+
+              @include phonewide {
+                float: none;
+                margin: 0 auto;
+              }
+
+              .glass-1,
+              .glass-2 {
+                height: 220px;
+                width: 350px;
+
+                @include desktop {
+                  height: 190px;
+                  width: 320px;
+                }
+
+                @include mid-touch {
+                  height: 160px;
+                  width: 290px;
+                }
+              }
+
+              img {
+                margin-left: -25px;
+              }
+            }
+
+            .content {
+              display: inline-block;
+              float: left;
+              padding: 5px 0 50px 100px;
+              width: 70%;
+
+              @include extrastopper {
+                padding-left: 50px
+              }
+
+              @include widescreen {
+                width: 65%;
+              }
+
+              @include touch {
+                padding-left: 5px;
+                width: 55%;
+              }
+
+              @include phonewide {
+                padding-left: 0;
+                text-align: center;
+                width: 100%;
+              }
+            }
+
+            &:nth-of-type(even){
+              display: flex;
+
+              .image-holder {
+                float: right;
+                order: 2;
+
+                @include phonewide {
+                  float: none;
+                }
+              }
+
+              .content {
+                float: left;
+                order: 1;
+                padding-left: 0;
+                padding-right: 100px;
+
+                @include phonewide {
+                  float: none;
+                  padding: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      li {
+        -webkit-flex: 1 0 0px;
+        cursor: pointer;
+        background-size: cover;
+        background-position: top center;
+        overflow: hidden;
+        margin: 0 5px;
+        padding: 0;
+        position: relative;
+        z-index: 1;
+        @include transition;
+
+        @include widescreen {
+          display: inline-block;
+          width: 33%;
+        }
+
+        @include mid-touch {
+          margin-bottom: 5px;
+          width: 30% !important;
+        }
+
+        @include phonewide {
+          width: 46% !important;
+        }
+
+        @include oddphone {
+          margin: 0 0 2px 0;
+          padding-bottom: 20px;
+          width: 100% !important;
+        }
+
+        .content {
+          bottom: -25px;
+          padding: 10px 15px 0 15px;
+          text-align: left;
+          position: absolute;
+          z-index: 5;
+
+          h3 {
+            @include welcome-h3;
+            @include transition;
+
+            color: #fff;
+            font-size: em(20);
+            line-height: 34px;
+
+            br {
+              @include phonewide {
+                display: none;
+              }
+            }
+
+            @include widescreen {
+              font-size: em(20);
+              line-height: 34px;
+            }
+
+            @include phonewide {
+              font-size: em(18);
+              line-height: 30px;
+            }
+          }
+
+          p {
+            @include main-p;
+            @include main-p-widescreen;
+            @include main-p-midtouch;
+            @include main-p-phonewide;
+            @include transition;
+
+            color: #fff;
+          }
+
+          .button-block {
+            &.alignleft {
+              @include phonewide {
+                position: relative;
+                text-align: center;
+              }
+            }
+
+            .more {
+              position: relative;
+              top: -10px;
+
+              @include phonewide {
+                float: none !important;
+              }
+            }
+          }
+        }
+
+        .fade {
+          background-image: url(/wp-content/themes/pguard/resources/assets/images/fade-content.png);
+          background-position: bottom center;
+          background-repeat: repeat-x;
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: 1;
+        }
+
+        a {
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+
+          @include transition;
+
+          .content {
+            h3 {
+              color: #fff;
+            }
+
+            .more {
+              color: $primary_highlight;
+            }
+          }
+
+          &:hover {
+            h3 {
+              color: $primary_highlight;
+            }
+
+            .more {
+              opacity: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .quote-block {
+    background: #333;
+    background-position: center center;
+    background-size: cover;
+    display: inline-block;
+    margin: -20px 0 -25px 0;
+    overflow: hidden;
+    padding: 50px 0 70px 0;
+    position: relative;
+    width: 100%;
+
+    .columns {
+      position: relative;
+      z-index: 10;
+    }
+
+    .shade {
+      background: rgba(0, 0, 0, 0.4);
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 5;
+
+      @include transition;
+    }
+
+    .column {
+      text-align: center;
+
+      h4 {
+        color: #fff;
+        font-size: em(26);
+        font-weight: 800;
+        margin-bottom: 8px;
+        text-transform: none;
+      }
+
+      p {
+        color: #fff;
+      }
+
+      .button-block {
+        margin-top: 5px;
+
+        a.btn {
+          background: #fff;
+          border: 2px solid #fff;
+          color: #333;
+          font-family: $primaryFont;
+          font-size: em(19);
+          font-weight: 800;
+          padding: 12px 16px;
+          text-transform: none;
+
+          @include transition;
+          @include button-widescreen;
+          @include button-midtouch;
+          @include button-phonewide;
+
+          &:hover {
+            background: transparent;
+            border-color: #fff;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  /* careers */
+  .section-title {
+    @include welcome-h2;
+    @include welcome-h2-widescreen;
+    @include welcome-h2-midtouch;
+    @include welcome-h2-phonewide;
+
+    color: $primary_link;
+    display: inline-block;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* sidebar */
+  ul.listings {
+    list-style-type: none;
+    margin: 10px 0 0 0;
+
+    li {
+      margin: 0 0 5px 0;
+
+      .job-block {
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 1px solid #f1f1f1;
+        border-left: 0;
+        padding: 2px 0;
+
+        &:hover {
+          border-bottom: 1px solid #ccc;
+          box-shadow: 0 0 0;
+        }
+
+        .job-title {
+          color: #666;
+          display: block;
+          font-family: $primaryFont;
+          font-weight: 900;
+          font-size: em(14);
+          text-transform: none;
+
+          a {
+            color: #666;
+            text-transform: lowercase;
+            @include transition;
+
+            &:hover {
+              color: #333;
+            }
+          }
+        }
+
+        .job-type {
+          font-size: em(10);
+        }
+      }
+    }
+  }
+
+  .job-block {
+    background: #fff;
+    border: 1px solid #f1f1f1;
+    height: 100%;
+    margin-right: 5px;
+    padding: 10px;
+    @include transition;
+
+    &:hover {
+      border: 1px solid #ccc;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .job-title {
+      color: #666;
+      display: block;
+      font-family: $primaryFont;
+      font-weight: 900;
+      font-size: em(20);
+      text-transform: none;
+
+      a {
+        color: #666;
+        text-transform: lowercase;
+        @include transition;
+
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+
+
+    .button-block {
+      a.more {
+        background: transparent;
+        border: transparent;
+        color: $buttonStyled-linkcolor !important;
+        font-size: em(14);
+        margin: 10px 0 0 0 !important;
+        padding: 0 !important;
+        text-transform: lowercase;
+      }
+    }
+  }
+
+  ul.career-list {
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  a.career-btn {
+    border: 2px solid $primary_link;
+    color: $primary_link;
+    margin-bottom: 10px;
+    padding: 10px 25px;
+    text-transform: lowercase;
+    @include transition;
+
+    &:hover {
+      background: #333;
+      border-color: #333;
+      color: #fff;
+    }
+  }
+}
+
+/* HR Classes */
+hr.mini-divider {
+  background: $primary_brand-hover;
+  border: 0 transparent;
+  display: inline-block;
+  height: 3px;
+  margin: 5px auto 25px;
+  width: 40px;
+}
+
+hr.section-divider {
+  background: #efeff0;
+  border: 0 transparent;
+  display: inline-block;
+  height: 5px;
+  margin: 25px auto 15px;
+  width: 100%;
+}
+
+hr.cb {
+  background: transparent;
+  clear: both;
+  display: block;
+  margin: 0;
+  width: 100%;
+}

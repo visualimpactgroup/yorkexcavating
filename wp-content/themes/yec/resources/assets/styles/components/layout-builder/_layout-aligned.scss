@@ -1,0 +1,9 @@
+/* Single Aligned Columns */
+.centeralign,
+.leftalign {
+  padding-top: 40px !important;
+
+  @include widescreen {
+    padding-top: 10px !important;
+  }
+}

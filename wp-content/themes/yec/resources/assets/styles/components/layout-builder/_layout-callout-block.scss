@@ -1,0 +1,64 @@
+/* Call-Out Block */
+section.callOut {
+  background: $primary_hover;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  margin-top: -30px;
+  padding: 30px 0 0 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  .shade {
+    background: rgba(0, 96, 156, 0.97);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .cont {
+    position: relative;
+    z-index: 5;
+
+    h2
+    h3,
+    h4 {
+      @include main-h3;
+      @include main-h3-widescreen;
+      @include main-h3-midtouch;
+      @include main-h3-phonewide;
+
+      color: #fff;
+    }
+
+    p {
+      @include main-p;
+      @include main-p-widescreen;
+      @include main-p-midtouch;
+      @include main-p-phonewide;
+
+      color: #fff;
+    }
+
+    .button-block {
+      a.btn {
+        &.styled {
+          &:nth-of-type(1){
+            background: #fff !important;
+            border-color: #fff !important;
+            color: $primary_hover !important;
+
+            &:hover {
+              background: $primary_hover !important;
+              border-color: #fff !important;
+              color: #fff !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

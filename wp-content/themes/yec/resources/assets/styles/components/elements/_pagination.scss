@@ -1,0 +1,83 @@
+/** Pagination */
+nav.pagination {
+  display: block;
+  font-family: $primaryFont;
+  margin: $paginationMargin;
+  max-width: 1400px;
+  width: 100%;
+
+  &.is-left {
+    text-align: left;
+  }
+
+  .pagination-next,
+  .pagination-previous {
+    border: $paginationBorder;
+    color: $paginationControlColor;
+    border-radius: $paginationBorderRadius;
+    height: $paginationControlHeight;
+    padding: $paginationPadding;
+    @include transition;
+
+    a {
+      color: $paginationControlColor;
+      font-size: em($paginationControlFontSize);
+      @include transition;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-color: $paginationBorderColor_hover !important;
+        color: $paginationControlColor_hover !important;
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: $paginationBorderColor_hover !important;
+      color: $paginationControlColor_hover !important;
+    }
+  }
+
+  ul.pagination-list {
+    display: inline-block;
+    margin: 0;
+    padding-top: 10px;
+
+    li {
+      display: inline-block !important;
+      float: left !important;
+      margin: 0 10px 0 0 !important;
+      width: auto !important;
+      @include transition;
+
+      &.ellipsis {
+        padding: $paginationPadding;
+
+        span {
+          color: $paginationControlColor;
+        }
+      }
+
+      a {
+        border: $paginationBorder;
+        border-radius: $paginationBorderRadius;
+        color: $paginationControlColor;
+        font-size: em($paginationControlFontSize);
+        height: $paginationControlHeight;
+        padding: $paginationSmBlockPadding;
+        @include transition;
+        @include total-centered;
+      }
+
+      &.active,
+      &:hover {
+        a {
+          border-color: $paginationBorderColor_hover !important;
+          color: $paginationControlColor_hover !important;
+        }
+      }
+    }
+  }
+}

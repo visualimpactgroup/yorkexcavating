@@ -1,0 +1,133 @@
+/* Starting Block */
+.main-content {
+  section.startingBlock {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 50px 0 0 0;
+    text-align: left;
+    width: 50%;
+
+    @include extrastopper {
+      padding: 20px 0;
+    }
+
+    @include touch {
+      border-top: 1px solid #f1f1f1;
+      margin: 0 auto;
+      padding: 0 0 10px 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    .block-container {
+      background: $primary_link;
+      display: inline-block;
+      float: left;
+      margin-top: 20px;
+      padding: 20px;
+      position: absolute;
+      text-align: left;
+      max-width: 360px;
+      z-index: 1;
+      //width: calc(100% / 2);
+
+      @include extrastopper {
+        background: transparent;
+        color: $primary;
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #fff;
+        font-size: em(28);
+        font-weight: 500;
+        line-height: 42px;
+        padding-bottom: 5px;
+        padding-top: 0;
+
+        @include touch {
+          font-size: em(24);
+          line-height: 32px;
+        }
+
+        strong {
+          color: #fff;
+
+          @include extrastopper {
+            color: $primary !important;
+          }
+        }
+
+        @include extrastopper {
+          color: $primary !important;
+        }
+      }
+
+      &:first-of-type {
+        width: 40%;
+
+        @include extrastopper {
+          width: 100%;
+        }
+
+        @include touch {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      &:nth-of-type(2) {
+        @include extrastopper {
+          width: 100%;
+        }
+      }
+    }
+
+    p {
+      color: #fff !important;
+
+      @include extrastopper {
+        color: $primary !important;
+      }
+    }
+
+    img {
+      &:after {
+        background: #000;
+        content: '';
+        height: 100%;
+      }
+
+      @include extrastopper {
+        display: none;
+      }
+    }
+
+    .button-block {
+      a.btn {
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+          color: #fff !important;
+
+          @include extrastopper {
+            color: $primary_link !important;
+          }
+
+          &:hover,
+          &:focus {
+            color: $primary !important;
+
+            @include extrastopper {
+              color: $primary_hover !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

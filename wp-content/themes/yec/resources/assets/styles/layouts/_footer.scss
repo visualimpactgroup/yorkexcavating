@@ -1,0 +1,353 @@
+footer.footer-container {
+  background-color: $footerPrimaryColor;
+  padding: 35px 0 20px 0;
+  position: relative;
+
+  @include phonewide {
+    text-align: center;
+  }
+
+  .content-links {
+    padding: 0 0 40px 0;
+    position: relative;
+
+    @media (max-width: 1335px) {
+      padding: 10px 0 20px 0;
+    }
+
+    .footer-title {
+      @include footer-nav-title-1;
+      @include footer-nav-title-widescreen;
+      @include footer-nav-title-midtouch;
+      @include footer-nav-title-phonewide;
+      display: inline-block;
+      width: 100%;
+
+      @include fullhd {
+        padding: 20px 0 0 0;
+      }
+
+      @include widescreen {
+        font-size: em(17);
+      }
+    }
+
+    @include fullhd {
+      padding-left: 5px;
+    }
+
+    @include phonewide {
+      display: none;
+    }
+
+    .link-group {
+      clear: left;
+      float: left;
+      display: inline-block;
+      margin-top: 10px;
+      width: 100%;
+
+      @include fullhd {
+        margin-top: 20px;
+      }
+
+      @include mid-touch {
+        margin-bottom: 10px;
+        padding-left: 8px;
+        width: 100% !important;
+      }
+
+      ul {
+        @include fullhd {
+          padding-bottom: 20px;
+        }
+
+        li {
+          display: inline-block;
+          margin: 30px 15px 0 0;
+          vertical-align: top;
+
+          @include fullhd {
+            margin: 10px 15px 0 0;
+            width: 30%;
+          }
+
+          @include widescreen {
+            width: 28%;
+          }
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+
+          a {
+            @include footer-nav;
+            @include footer-nav-widescreen;
+            @include footer-nav-midtouch;
+            @include footer-nav-phonewide;
+          }
+        }
+      }
+    }
+  }
+
+  .seo-note {
+    p {
+      line-height: 32px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .contact-column {
+    position: relative;
+    text-align: center;
+
+    .cinfo {
+      max-width: 320px;
+
+      .block {
+        color: #999;
+        display: inline-block;
+        font-family: $primaryFont;
+        font-size: em(14);
+        font-weight: 600;
+        line-height: 22px;
+        margin: 10px 0 10px 0;
+        padding-left: 20px;
+        width: 100%;
+        text-align: left;
+        vertical-align: top;
+
+        .contact {
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    @include phonewide {
+      margin: 0 auto;
+      position: relative;
+      text-align: center;
+    }
+
+    @include oddphone {
+      width: 90% !important;
+    }
+  }
+
+  .brand {
+    max-width: 550px;
+    margin: 0 auto 10px;
+    position: relative;
+    text-align: center;
+
+    @include fullhd {
+      max-width: 450px;
+    }
+  }
+
+  .cinfo {
+    text-align: center;
+
+    ul {
+      margin: 20px 0;
+
+      li {
+        color: rgba(255, 255, 255, 0.5);
+        display: inline-block;
+        font-size: em(16);
+        line-height: 26px;
+        font-weight: 600;
+        width: 100%;
+
+        a {
+          color: rgba(255, 255, 255, 0.5);
+          text-decoration: none;
+          @include transition;
+
+          &:hover,
+          &:focus {
+            color: rgba(255, 255, 255, 1);
+          }
+        }
+
+        @include widescreen {
+          font-size: em(14);
+        }
+      }
+    }
+  }
+
+  p {
+    color: #ccc;
+    font-size: em(15);
+    line-height: 24px;
+    padding-top: 10px;
+  }
+
+  @include enewsForm;
+
+  .eform-block {
+    margin: 2px 0 5px 0;
+
+    @include phonewide {
+      margin: 0 0 10px -60px;
+    }
+
+    input {
+      background: transparent;
+
+      @include fullhd {
+        width: 180px;
+      }
+
+      @include widescreen {
+        width: 160px;
+      }
+    }
+  }
+
+  .contact-block {
+    color: #fff;
+    display: inline-block;
+    float: left;
+    font-family: $primaryFont;
+    font-weight: 700;
+    margin: 20px 30px 0 0;
+
+    span {
+      border: 2px solid #fff;
+      border-radius: 50%;
+      display: inline-block !important;
+      margin-right: 10px;
+      padding: 2px 6px;
+      position: relative;
+      top: 3px;
+
+      [class^="icon-"] {
+        font-size: 16px;
+        position: relative;
+        top: 1px;
+      }
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  .social-media {
+    float: right;
+    margin-top: 40px;
+
+    @include touch {
+      float: none;
+      margin-top: 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    ul {
+      li {
+        border: 2px solid #fff;
+        border-radius: 50%;
+        display: inline-block;
+        float: left;
+        padding: 10px;
+        @include total-centered;
+        @include transition;
+
+        [class^="icon-"] {
+          color: rgba(255, 255, 255, 1);
+          font-size: em(22);
+          @include transition;
+        }
+
+        &:hover,
+        &:visited {
+          background: #fff;
+          border-color: #fff;
+
+          [class^="icon-"] {
+            color: $footerPrimaryColor !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.copyright-block {
+  background: $footerCopyrightColor;
+  display: inline-block;
+  clear: both;
+  padding: 10px 0 15px 0;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+
+  @include touch {
+    border-top: 0;
+    text-align: center;
+  }
+
+  .grey-block {
+    color: $copyright-nav-color;
+    font-family: $copyright-nav-fontfamily;
+    font-size: em($copyright-nav-size);
+    font-weight: $copyright-nav-fontweight;
+    line-height: 20px;
+    margin-left: -10px;
+    padding-bottom: 5px;
+
+    a {
+      color: $copyright-nav-color;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $copyright-nav-color_hover;
+      }
+    }
+
+    nav {
+      display: inline-block;
+
+      ul {
+        li {
+          border-right: $copyright-nav-borderright;
+          border-left: $copyright-nav-borderleft;
+          display: inline-block;
+          line-height: $copyright-nav-lineheight;
+          padding-top: 2px;
+
+          &:nth-of-type(1) {
+            margin-left: 0;
+            padding-left: 0;
+
+            a {
+              margin-left: 0;
+              padding-left: 0;
+            }
+          }
+
+          a {
+            @include copyright-nav;
+            @include copyright-nav-widescreen;
+            @include copyright-nav-midtouch;
+            @include copyright-nav-phonewide;
+
+            font-size: 100%;
+          }
+
+          &:last-of-type {
+            border-left: $copyright-nav-borderleft-last;
+            border-right: $copyright-nav-borderright-last;
+            margin-right: 0;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

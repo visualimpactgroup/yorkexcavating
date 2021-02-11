@@ -1,0 +1,43 @@
+/* Custom Login Styles */
+body.login {
+  div#login {
+    h1 {
+      a {
+        background-size: 80% !important;
+        padding-bottom: 10px;
+        width: 100%;
+      }
+    }
+  }
+
+  #backtoblog,
+  #nav,
+  .privacy-policy-page-link {
+    a {
+      color: $linkColor;
+
+      &:hover,
+      &:active {
+        color: $linkHover;
+      }
+    }
+  }
+
+  .message {
+    border-color: $positiveBorderColor;
+  }
+
+  .wp-core-ui {
+    .button-primary {
+      background: $primary_link;
+      border-color: $primary_link;
+      color: #fff;
+
+      &:hover {
+        background: #fff;
+        border-color: $primary_link;
+        color: $primary_link;
+      }
+    }
+  }
+}

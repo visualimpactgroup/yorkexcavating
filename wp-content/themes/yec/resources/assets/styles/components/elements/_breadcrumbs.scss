@@ -1,0 +1,74 @@
+.breadcrumbs {
+  color: $breadcrumb-link;
+  display: inline-block;
+  font-size: em($breadcrumb-link_fontS);
+  padding: 0 0 20px 0;
+  width: 100%;
+
+  @include touch {
+    padding-left: 10px;
+  }
+
+  .column {
+    margin: 0;
+    padding: 0;
+  }
+
+  .is-marginless {
+    left: -5px;
+    padding-bottom: 10px;
+    position: relative;
+  }
+
+  span,
+  span [class^="icon-"],
+  span [class*=" icon-"] {
+    color: $breadcrumb-link;
+    font-family: $breadcrumb-link_font;
+    font-size: 100%;
+    font-weight: $breadcrumb-link_fontW;
+    margin-left: $breadcrumb-link_margin;
+    margin-right: $breadcrumb-link_margin;
+
+    @include touch {
+      font-size: 90%;
+    }
+
+    &:first-of-type(){
+      margin-left: 0;
+    }
+
+    &.sep {
+      font-size: em($breadcrumb-link_fontSep);
+      position: relative;
+      top: $breadcrumb-link_SepPos;
+    }
+  }
+
+  a {
+    color: $breadcrumb-link;
+    font-size: 100%;
+    margin: 0 !important;
+
+    span,
+    span [class^="icon-"],
+    span [class*=" icon-"] {
+      color: $breadcrumb-link;
+      margin: 0 !important;
+      font-size: 100%;
+      @include transition;
+
+      @include touch {
+        font-size: 90%;
+      }
+    }
+
+    &:hover {
+      color: $breadcrumb-link_hover;
+
+      span {
+        color: $breadcrumb-link_hover;
+      }
+    }
+  }
+}

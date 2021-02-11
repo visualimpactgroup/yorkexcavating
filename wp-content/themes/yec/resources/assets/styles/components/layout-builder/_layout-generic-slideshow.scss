@@ -1,0 +1,67 @@
+/* Generic Slideshow */
+.generic-slideshow {
+  margin: 0 auto;
+  max-width: 2000px;
+
+  button.slick-arrow {
+    background: rgba(0, 0, 0, 0.5);
+    border: 0;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    height: 40px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 40px;
+    z-index: 5;
+    @include total-centered;
+    @include transition;
+
+    @include phonewide {
+      height: 30px;
+      width: 30px;
+    }
+
+    [class^="icon-"] {
+      font-size: 25px;
+      position: relative;
+
+      @include phonewide {
+        font-size: 20px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: rgba(255, 255, 255, 1);
+    }
+
+    &.slick-prev {
+      left: 0;
+
+      [class^="icon-"] {
+        left: -1px;
+        top: 2px;
+
+        @include phonewide {
+          left: -2px;
+          top: 3px;
+        }
+      }
+    }
+
+    &.slick-next {
+      right: 0;
+
+      [class^="icon-"] {
+        right: -1px;
+        top: 2px;
+
+        @include phonewide {
+          right: -2px;
+          top: 3px;
+        }
+      }
+    }
+  }
+}

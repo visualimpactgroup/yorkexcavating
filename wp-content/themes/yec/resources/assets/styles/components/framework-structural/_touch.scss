@@ -1,0 +1,42 @@
+/** Removing Specific Styling for Touch Devices */
+body.is-touch {
+
+  a.image-btn {
+    &:hover {
+      span {
+        left: 8px;
+        transition: none;
+
+        @include widescreen {
+          left: 5px;
+        }
+      }
+
+      .shade {
+        background: transparent;
+        transition: none;
+
+        .view-more {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+  ul.events-list {
+    @include phonewide {
+      margin-top: 10px;
+    }
+
+    li {
+      .event-block {
+        &:hover {
+          img {
+            opacity: 1.0;
+          }
+        }
+      }
+    }
+  }
+}

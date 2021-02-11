@@ -1,0 +1,441 @@
+/* Calendar Styles */
+.calendar-block {
+  background: #efefef;
+  display: inline-block;
+  font-family: $primaryFont;
+  padding: 20px 0 50px 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  .contain {
+    position: relative;
+
+    @include widescreen {
+      position: static;
+    }
+  }
+
+  @include widescreen {
+    padding-bottom: 60px;
+    text-align: center;
+  }
+
+  &.internal-block {
+    background: transparent;
+  }
+
+  .block-title {
+    color: #333;
+    display: inline-block;
+    font-size: em(20);
+
+    @include widescreen {
+      font-size: em(17);
+      padding-bottom: 15px;
+      width: 100%;
+    }
+
+    strong {
+      font-weight: 700;
+
+      @include oddphone {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* full calendar link */
+a.full-calendar {
+  background: transparent;
+  border: 1px solid #999;
+  color: #999;
+  display: inline-block;
+  font-size: em(14);
+  margin-top: -2px;
+  opacity: 0.7;
+  padding: 5px 12px;
+  position: absolute;
+  right: 20px;
+
+  @include transition;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @include widescreen {
+    bottom: 10px;
+    left: 10%;
+    margin: 0 auto;
+    right: 10%;
+    width: 200px;
+  }
+}
+
+.return {
+  color: #999;
+  font-family: $primaryFont;
+  font-size: em(14);
+  opacity: 0.7;
+  position: relative;
+  top: -10px;
+  z-index: 10;
+
+  @include transition;
+
+  &:hover {
+    opacity: 1 !important;
+  }
+}
+
+/* calendar blocks */
+.calendar-blocks {
+  display: -webkit-flex !important;
+  list-style-type: none !important;
+  margin-left: 0 !important;
+  padding-top: 30px !important;
+  position: relative !important;
+  top: 0 !important;
+  vertical-align: top;
+  z-index: 10;
+
+  @include touch {
+    display: inline !important;
+    text-align: center;
+  }
+
+  &.single-block {
+    padding-top: 0 !important;
+
+    .cal-block {
+      .event-block {
+        &:hover {
+          box-shadow: none;
+        }
+
+        .shade {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &.full-cal-blocks {
+    display: inline-block !important;
+    list-style-type: none !important;
+    margin: 0 auto !important;
+    padding-top: 0 !important;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    li,
+    .cal-block {
+      margin-bottom: 10px !important;
+      padding-bottom: 0;
+      width: 32% !important;
+
+      @media (max-width: 1250px) {
+        max-width: 47%;
+        width: 47% !important;
+      }
+
+      @media (max-width: 850px) {
+        max-width: 100%;
+        width: 100% !important;
+      }
+    }
+  }
+
+  @include event-view;
+
+  li {
+    display: inline-block;
+    float: none !important;
+    margin-left: 0 !important;
+    max-width: 33%;
+    width: 100%;
+
+    @include touch {
+      display: inline-block;
+      max-width: 45%;
+      padding-top: 10px;
+    }
+
+    @include phonewide {
+      max-width: 100%;
+    }
+  }
+
+  .cal-block {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.single-event {
+  .meta {
+    display: inline-block;
+    padding: $entryMetaContainerPadding;
+    width: 100%;
+
+    .block {
+      border-right: $entryMetaBorder;
+      color: $entryMetaColor;
+      display: inline-block;
+      float: left;
+      font-family: $entryMetaFont;
+      font-size: em($entryMetaFontSize);
+      line-height: $entryMetaLH;
+      margin: $entryMetaMargin;
+      padding: $entryMetaPadding;
+      text-transform: $entryMetaTransform;
+
+      &:last-of-type {
+        border-right: 0;
+      }
+
+      a {
+        color: $entryMetaColor;
+        @include transition;
+
+        &:hover,
+        &:visited {
+          color: $entryMetaColorHover;
+        }
+      }
+
+      span {
+        padding-left: 2px;
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+}
+
+
+/* calendar filter bar */
+.main-content.internal-content {
+  ul.filterbar {
+    background: #efefef;
+    display: inline-block;
+    margin-left: 0 !important;
+    padding: 10px !important;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    li {
+      color: $primary_link;
+      display: inline-block;
+      font-family: $primaryFont;
+      font-size: em(17);
+      float: none;
+      padding: 5px 50px;
+      position: relative;
+      width: auto;
+
+      a {
+        color: #333;
+        position: relative;
+        z-index: 50;
+      }
+
+      .triangle {
+        bottom: 0;
+        border-top: solid 30px #efefef;
+        border-left: solid 30px transparent;
+        border-right: solid 30px transparent;
+        display: inline-block;
+        height: 30px;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        vertical-align: middle;
+        width: 60px;
+        z-index: 1;
+
+        @include transition;
+      }
+
+      &.r-tabs-state-active,
+      &:hover {
+        a {
+          color: $primary_link;
+        }
+
+        .triangle {
+          bottom: -20px;
+        }
+      }
+    }
+  }
+
+  /* Responsive Styles */
+  .r-tabs-accordion-title {
+    background: #efefef;
+    color: $primary_link;
+    font-family: $primaryFont;
+    font-size: em(17);
+    margin-bottom: 5px;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+
+    &.r-tabs-state-active {
+      background: $primary_link;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    a {
+      color: #333;
+      position: relative;
+      z-index: 5;
+    }
+  }
+
+  ul.events-list {
+    list-style-type: none !important;
+    width: 100% !important;
+
+    @include event-view;
+  }
+
+  @include touch {
+    .r-tabs {
+      .r-tabs-panel {
+        padding: 0;
+
+        ul.events-list {
+          @include event-view;
+
+          li {
+            border-bottom: 1px solid dotted #ccc;
+            display: inline-block;
+            width: 100%;
+
+            .columns {
+              .column {
+                &.is-5 {
+                  float: left;
+                  //width: 250px;
+                  width: 30%;
+
+                  @include oddphone {
+                    width: 100%;
+                  }
+
+                  .event-block {
+                    img {
+                      width: 100%;
+                    }
+                  }
+                }
+
+                &.is-7 {
+                  float: right;
+                  //width: 360px;
+                  width: 65%;
+
+                  @include oddphone {
+                    width: 100%;
+                  }
+
+                  .button-block.left {
+                    text-align: left !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* mobile calendar */
+#tribe-events .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] {
+  background: transparent !important;
+}
+
+.tribe-events-calendar td.tribe-events-present.mobile-active {
+  background-color: transparent;
+}
+
+ul.tribe-events-sub-nav {
+  li {
+    a {
+      background: transparent;
+      font-family: $primaryFont;
+    }
+  }
+}
+
+.tribe-events-ical {
+  display: none !important;
+}
+
+.tribe-mobile-day {
+  border: 1px solid #f1f1f1;
+
+  h3.tribe-mobile-day-heading {
+    font-family: $primaryFont;
+    margin-bottom: 0;
+    padding: 10px 8px;
+    text-align: center;
+
+    span {
+      font-weight: 800;
+    }
+  }
+
+  .tribe-events-mobile {
+    border-bottom: 1px solid #f1f1f1;
+    font-family: $primaryFont;
+    text-align: center;
+
+    h4 {
+      font-size: em(16);
+    }
+
+    .tribe-events-event-body {
+      .tribe-events-event-schedule-details {
+        display: block;
+        font-size: em(14);
+        opacity: 0.8;
+      }
+
+      a.tribe-events-read-more {
+        font-size: em(14);
+      }
+    }
+
+    a {
+      color: $primary_link;
+    }
+  }
+}
+
+#tribe-events-bar {
+  display: none !important;
+}
+
+.single-tribe_events {
+  .tribe-events-event-meta {
+    background: transparent;
+  }
+}
